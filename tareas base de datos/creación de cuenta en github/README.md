@@ -16,3 +16,6 @@ Lo primero que hize fue crear mi cuenta en Github
 Mientras lo hacia lo unico que se podria considerar un problema fue el hecho de la configuracion inicial ya que habia muchos campos los cuales yo desconocia por lo tanto los deje en blanco.
 
 ![image](./fotos/imagen_2.png)
+
+#### Segundo paso 
+Lo segundo fue crear los repositorios para las asignaturas que lo necesitaban 
