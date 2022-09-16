@@ -11,8 +11,8 @@
 #### Primer Paso 
 Lo primero que hize fue crear mi cuenta en Github 
 
-![image](./fotos/imagen sesion.png)
+![image](./fotos/imagen_sesion.png)
 
-mientras lo hacia lo unico que se podria considerar un problema fue el hecho de la configuracion inicial ya que habia muchos campos los cuales yo desconocia por lo tanto los deje en blanco.
+Mientras lo hacia lo unico que se podria considerar un problema fue el hecho de la configuracion inicial ya que habia muchos campos los cuales yo desconocia por lo tanto los deje en blanco.
 
-![image](./fotos/imagen 2.png)
+![image](./fotos/imagen_2.png)
