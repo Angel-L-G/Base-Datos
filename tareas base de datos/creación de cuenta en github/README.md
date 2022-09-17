@@ -6,7 +6,11 @@
 
 ## Indice 
 
+Primer Paso
 
+Segundo Paso 
+
+Tercer Paso 
 
 #### Primer Paso 
 Lo primero que hize fue crear mi cuenta en Github 
@@ -18,7 +22,7 @@ Mientras lo hacia lo unico que se podria considerar un problema fue el hecho de 
 ![image](./fotos/imagen_2.png)
 
 #### Segundo paso 
-Lo segundo fue crear los repositorios para las asignaturas que lo necesitaban como hbase de datos y programación 
+Lo segundo fue crear los repositorios para las asignaturas que lo necesitaban como base de datos y programación 
 
 ![image](./fotos/gitHub.png)
 
