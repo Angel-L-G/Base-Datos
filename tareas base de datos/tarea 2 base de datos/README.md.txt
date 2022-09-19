@@ -1,5 +1,5 @@
 # Estrategias y Gestores de Base de Datos
-![image](.fotos/Portada_2)
+![image](.fotos_tarea_2/Portada_2)
 
 ## indice
 
