@@ -30,19 +30,19 @@ k# Almacenamiento de la información Tarea 1
 
 ### Glosario <a name=id11> </a>
 
-- ¿ Que es una base de datos relacional ? 
+- ¿ Que es una base de datos relacional ?  
     Una base de datos relacional es un tipo de base de datos que almacena y proporciona acceso a puntos de datos relacionados entre si. Las bases de datos relacionales se basan en el modelo relacional, una forma intuitiva y directa de representar datos en tablas.
     
- - ¿ Que son las sentencias SQL ?
+ - ¿ Que son las sentencias SQL ?  
      Las sentencias SQL son las que permiten a los usuarios realizar consultas, modificaciones, inserciones y procesos de eliminación de los datos que se hayan guardado en los distintos objetos que forman parte de la base de datos con la que estemos trabajando.  
      
- - ¿ Que son los procedimientos almacenados ?
+ - ¿ Que son los procedimientos almacenados ?  
      Un procedimiento almacenado es un programa almacenado fisicamente en una base de datos. Su implementación varia de un gestor de bases de datos a otro. La ventaja de un procedimiento almacenado
      
- - ¿ Que son las transacciones ?
+ - ¿ Que son las transacciones ?  
      Una transacción es una interacción con una estructura de datos compleja, compuesta por varios procesos que se han de aplicar uno despues del otro.
      
- - ¿ Que es un sitema multiplataforma ?
+ - ¿ Que es un sitema multiplataforma ?  
      En informatica, se denomina multiplataforma a un atributo conferido a programas informáticos o metodos y conceptos de computo que son implementados, y operan internamente en multiples plataformas informaticas.
 
 ### MySql <a name=id1> </a>
