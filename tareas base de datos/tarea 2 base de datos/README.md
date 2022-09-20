@@ -116,7 +116,7 @@
 - PostgreSql se suele utilizar en Microsoft Windows , GNU/Linux , MacOS , BSD
 
 ### H2 <a name=id6> </a>
-![image](./fotos_tarea_2/H2.png)
+![image](./fotos_tarea_2/h2.png)
 - H2 es un sistema de gestión de bases de datos relacionales.
 
 - H2 soporta sentencias SQL , JDBC.
