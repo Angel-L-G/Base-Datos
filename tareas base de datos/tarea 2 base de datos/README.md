@@ -46,7 +46,7 @@
      En informatica, se denomina multiplataforma a un atributo conferido a programas informáticos o metodos y conceptos de computo que son implementados, y operan internamente en multiples plataformas informaticas.
 
 ### MySql <a name=id1> </a>
-
+![image](./fotos_tarea_2/MySQL.png)
 - MySQL es un sistema de base de datos relacional.
 
 - El servidor de bases de datos MySQL soporta distintos tipos de sentencias :  Lisp , Perl , PHP , Python , Ruby , Gambas , REALbasic.
@@ -60,7 +60,7 @@
 - MySQL se suele utilizar en Linux , Unix , Windows.
 
 ### SqlServer <a name=id2> </a>
-
+![image](./fotos_tarea_2/SQLserver.png)
 - SQLServer es un sistema de gestión de bases de datos relacionales.
 
 - SQL server soporta sentencias SQL.
@@ -74,7 +74,7 @@
 - SQLServer se suele utilizar en Linux , Windows , Mac.
 
 ### Oracle <a name=id3> </a>
-
+![image](./fotos_tarea_2/oracle.png)
 - Oracle es un sistema de gestión de bases de datos relacionales.
 
 - Oracle soporta sentencias SQL y PL.
@@ -88,7 +88,7 @@
 - Oracle se suele utilizar en Linux , Windows , Mac.
 
 ### Microsoft Access <a name=id4> </a>
-
+![image](./fotos_tarea_2/microsoft.png)
 - Microsoft Access es un sistema de gestión de bases de datos relacionales.
 
 - Microsoft Access soporta sentencias SQL , Excel , Outlook , ASCII , dBase , Paradox , FoxPro , Server , Oracle , ODBC.
@@ -102,7 +102,7 @@
 - Microsoft Access solo funciona en Windows.
 
 ### PostgreSql <a name=id5> </a>
-
+![image](./fotos_tarea_2/postgreSQL.png)
 - PostgreSql es un sistema de gestión de bases de datos relacionales.
 
 - PostgreSql soporta sentencias ODBC , JDBC , SQL , Pearl, TCL , Python.
@@ -116,7 +116,7 @@
 - PostgreSql se suele utilizar en Microsoft Windows , GNU/Linux , MacOS , BSD
 
 ### H2 <a name=id6> </a>
-
+![image](./fotos_tarea_2/H2.png)
 - H2 es un sistema de gestión de bases de datos relacionales.
 
 - H2 soporta sentencias SQL , JDBC.
@@ -130,7 +130,7 @@
 - H2 se suele utilizar en Widows XP o Vista , Mac OS X y Linux.
 
 ### FireBird <a name=id7> </a>
-
+![image](./fotos_tarea_2/firebird.png)
 - FireBird es un sistema de gestión de bases de datos relacionales.
 
 - FireBird soporta sentencias JDBC , ODBC.
@@ -144,7 +144,7 @@
 - FireBird se suele utilizar en Windows , Linux , MacOS , HP-UX , AIX , Solaris y mas.
 
 ### DB2 <a name=id8> </a>
-
+![image](./fotos_tarea_2/db2.png)
 - DB2 es un sistema de gestión de bases de datos relacionales.
 
 - DB2 soporta sentencias XML , PL , SQL.
@@ -161,7 +161,7 @@ https://angocadb2.blogspot.com/2012/06/log4db2-logging-in-sql-pl-db2.html#:~:tex
 - DB2 se suele utilizar en Linux , UNIX y Windows.
 
 ### SYBASE <a name=id9> </a>
-
+![image](./fotos_tarea_2/SYBASE.png)
 - SYBASE es un sistema de gestión de bases de datos relacionales.
 
 - SYBASE soporta sentencia SQL.
@@ -175,7 +175,7 @@ https://angocadb2.blogspot.com/2012/06/log4db2-logging-in-sql-pl-db2.html#:~:tex
 - SYBASE se suele utilizar en HP-UX , Microsoft Windows , AIX , Solaris , GNU/Linux , UNIX
 
 ### SQLite <a name=id10> </a>
-
+![image](./fotos_tarea_2/SQLite.png)
 - SQLite es un sistema de gestión de bases de datos relacionales.
 
 - SQLite soporta sentencia SQL , ava , Perl , Python , PHP , Ruby , C# , Pascal , SmallTalk , Clipper , Suneido , REXX , S-Lang.
