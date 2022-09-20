@@ -192,8 +192,9 @@ https://www.iteramos.com/pregunta/13937/creacion-de-un-procedimiento-almacenado-
 - SQLite se suele utilizar Windows 95 , 98 , ME , 2000 , XP y Vista ; Windows CE & Pocket PC , Mac OSX , Linux , OpenEmbedded , PalmOS , Symbian.
 
 
-- #### bibliografia <a name=id12> </a>
-
+#### bibliografia <a name=id12> </a>
+- Use wikipedia para sacar informacion de todos los tipos https://es.wikipedia.org/wiki/Wikipedia:Portada
+- Tambien use el pdf del campus https://www3.gobiernodecanarias.org/medusa/eforma/campus/pluginfile.php/7157422/mod_resource/content/0/Pre_UD1_Almacenamiento%20de%20la%20información.pdf
 - https://proximahost.es/blog/mysql-sistema-gestion-bases-datos/#:~:text=MySQL%20está%20escrito%20en%20su,accesible%20a%20todo%20el%20mundo.
 - https://es.wikipedia.org/wiki/MySQL
 - https://blog.mdcloud.es/sentencias-sql-tipos/#:~:text=Estas%20son%20las%20sentencias%20que,con%20la%20que%20estemos%20trabajando.
