@@ -49,7 +49,7 @@ k# Almacenamiento de la información Tarea 1
 ![image](./fotos_tarea_2/MySQL.png)
 - MySQL es un sistema de base de datos relacional.
 
-- El servidor de bases de datos MySQL soporta distintos tipos de sentencias :  Lisp , Perl , PHP , Python , Ruby , Gambas , REALbasic.
+- El servidor de bases de datos MySQL soporta distintos tipos de sentencias : SQL , Lisp , Perl , PHP , Python , Ruby , Gambas , REALbasic.
 
 - Las bases de datos de MySQL soportan procedimientos almacenados.
 
@@ -63,7 +63,7 @@ k# Almacenamiento de la información Tarea 1
 ![image](./fotos_tarea_2/SQLserver.png)
 - SQLServer es un sistema de gestión de bases de datos relacionales.
 
-- SQL server soporta sentencias SQL.
+- SQLServer soporta sentencias SQL.
 
 - Las bases de datos de SQLServer soportan procedimientos almacenados.
 
