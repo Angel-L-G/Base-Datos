@@ -1,4 +1,4 @@
-# Almacenamiento de la información Tarea 1
+k# Almacenamiento de la información Tarea 1
 ## Estrategias y Gestores de Base de Datos 
 ![image](./fotos_tarea_2/Portada_2.jpg)
 
@@ -179,7 +179,7 @@
 
 - Las bases de datos de SQLite no soportan procedimientos almacenados.
 
-- SQLite soporta transacciones.
+- SQLite no soporta transacciones.
 
 - SQLite es multiplataforma.
 
