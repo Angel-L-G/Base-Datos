@@ -149,10 +149,7 @@
 
 - DB2 soporta sentencias XML , PL , SQL.
 
-- Las bases de datos de DB2 
-
-En DB2 se podría crear un stored procedure por cada nivel de log: OFF, WARN, ERROR, INFO, FATAL, DEBUG. Estos procedimientos almacenados podrían estar dentro de un esquema logger, o inclusive ser definidos como globales, para ser llamados sin esquema.
-https://angocadb2.blogspot.com/2012/06/log4db2-logging-in-sql-pl-db2.html#:~:text=En%20DB2%20se%20podría%20crear,para%20ser%20llamados%20sin%20esquema.
+- Las bases de datos de DB2 soportan procedimientos almacenados.
 
 - DB2 soporta transacciones.
 
@@ -180,10 +177,7 @@ https://angocadb2.blogspot.com/2012/06/log4db2-logging-in-sql-pl-db2.html#:~:tex
 
 - SQLite soporta sentencia SQL , ava , Perl , Python , PHP , Ruby , C# , Pascal , SmallTalk , Clipper , Suneido , REXX , S-Lang.
 
-- Las bases de datos de SQLite 
-
-SQLite">sqlite ha tenido que sacrificar otras características que algunas personas encuentran útiles, como la alta concurrencia, el control de acceso de grano fino, un rico conjunto de funciones incorporadas, procedimientos almacenados Características esotéricas del lenguaje SQL, extensiones XML y/o java, escalabilidad de tera o peta-byte, etc.
-https://www.iteramos.com/pregunta/13937/creacion-de-un-procedimiento-almacenado-y-sqlite
+- Las bases de datos de SQLite no soportan procedimientos almacenados.
 
 - SQLite soporta transacciones.
 
@@ -208,3 +202,5 @@ https://www.iteramos.com/pregunta/13937/creacion-de-un-procedimiento-almacenado-
 - http://rafinguer.blogspot.com/2010/06/en-esta-ocasion-vamos-darle-una.html
 - https://www.arsys.es/blog/firebird-bbdd
 - https://sg.com.mx/revista/17/sqlite-la-base-datos-embebida
+- https://angocadb2.blogspot.com/2012/06/log4db2-logging-in-sql-pl-db2.html#:~:text=En%20DB2%20se%20podría%20crear,para%20ser%20llamados%20sin%20esquema.
+- https://www.iteramos.com/pregunta/13937/creacion-de-un-procedimiento-almacenado-y-sqlite
