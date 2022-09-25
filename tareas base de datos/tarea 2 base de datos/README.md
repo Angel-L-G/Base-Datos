@@ -1,4 +1,4 @@
-k# Almacenamiento de la información Tarea 1
+# Almacenamiento de la información Tarea 1
 ## Estrategias y Gestores de Base de Datos 
 ![image](./fotos_tarea_2/Portada_2.jpg)
 
