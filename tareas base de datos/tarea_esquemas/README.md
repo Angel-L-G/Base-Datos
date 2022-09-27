@@ -21,7 +21,7 @@
 
 [EJ_9](#id9)
 
-#Ejercicios
+# Ejercicios
 
 ### EJ_1 <a name=id1> </a>
 ![image](./esquemas/esquema_1.png)
