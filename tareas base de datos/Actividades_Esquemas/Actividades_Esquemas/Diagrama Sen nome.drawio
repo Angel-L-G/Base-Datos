@@ -1,1 +1,31 @@
-<mxfile host="app.diagrams.net" modified="2022-10-25T15:04:08.337Z" agent="5.0 (X11)" version="20.5.1" etag="MqWpxJrZsL7qnahqYoh2" type="github"><diagram id="WCxlncZmJOnVWmjMvG6u">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-10-25T15:20:48.216Z" agent="5.0 (X11)" etag="BLCViyWsZFyfT4Dbi33P" version="20.5.1" type="github">
+  <diagram id="WCxlncZmJOnVWmjMvG6u" name="Páxina-1">
+    <mxGraphModel dx="1422" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-1" value="Diseñar una Base de Datos para representar la información docente de un &lt;br&gt;&lt;div&gt;colegio, sabiendo que&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;La formación abarca ocho cursos (1º, 2º, 3º .. 8º) en los que se &lt;br&gt;&lt;div&gt;imparten diversas asignaturas:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;tales como Matemáticas, Física, Ciencias &lt;/div&gt;&lt;div&gt;Naturales, Sociales, Dibujo, etc., dándose el caso de algunas &lt;/div&gt;&lt;div&gt;asignaturas de distintos cursos que tienen el mismo nombre.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Cada curso se reparte en varios grupos de alumnos a los que se asigna &lt;br&gt;una letra: p.e. 3ºA, 2ºD, 5ºC, 1ºB, y se ubican en un aula fija para &lt;br&gt;&lt;div&gt;todo el curso. &lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Las aulas, identificadas por un número, tienen una &lt;/div&gt;&lt;div&gt;determinada capacidad de número de alumnos. De ellas interesa conocer, &lt;/div&gt;además, si disponen o no de conexión a la red de computadores del &lt;br&gt;&lt;div&gt;centro, y de pantalla para la proyección de transparencias.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Los profesores del centro, de los que se dispone de su nombre y &lt;br&gt;apellidos, DNI, dirección y teléfono, pueden impartir varias asignaturas&lt;br&gt;&lt;div&gt; distintas a grupos distintos. &lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Además, cada curso tiene un profesor &lt;/div&gt;&lt;div&gt;coordinador y cada grupo un profesor tutor.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Acerca de los alumnos, además de su nombre y apellidos, dirección y &lt;br&gt;teléfono, se desea reflejar el curso en que están matriculados y el &lt;br&gt;grupo al que están asignados. También se desea representar qué alumno es&lt;br&gt; el delegado de cada grupo. Como puede darse el caso, de alumnos con el &lt;br&gt;mismo nombre y apellidos, cada alumno tiene asociado un (único) número &lt;br&gt;de matrícula que facilita su identificación." style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry width="430" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-2" value="Alumnos" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-3" value="Asignaturas" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="80" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-4" value="Curso?" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-5" value="Aulas" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-6" value="Grupos?" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="200" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="44QbsXlHf_X_GZYJamJQ-7" value="Profesores" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="240" width="100" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
