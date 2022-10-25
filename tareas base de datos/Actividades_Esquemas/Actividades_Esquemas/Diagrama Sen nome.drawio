@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-25T15:20:48.216Z" agent="5.0 (X11)" etag="BLCViyWsZFyfT4Dbi33P" version="20.5.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-25T15:22:15.881Z" agent="5.0 (X11)" etag="fmMvLvDyTo_gCnXjgUzs" version="20.5.1" type="github">
   <diagram id="WCxlncZmJOnVWmjMvG6u" name="Páxina-1">
     <mxGraphModel dx="1422" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8,22 +8,22 @@
           <mxGeometry width="430" height="470" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-2" value="Alumnos" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="40" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="370" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-3" value="Asignaturas" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="80" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="90" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-4" value="Curso?" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="120" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="40" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-5" value="Aulas" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="160" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="210" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-6" value="Grupos?" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="200" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="150" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="44QbsXlHf_X_GZYJamJQ-7" value="Profesores" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="440" y="240" width="100" height="40" as="geometry" />
+          <mxGeometry x="440" y="270" width="100" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
