@@ -12,9 +12,10 @@ Se ha creado una base de datos con los datos de ciudades y sus aeropuertos. Los 
     Distancia_km: distancia del aeropuerto a la ciudad en km.
     
 ### Paso 1: 
-  codAeropuerto
-  NombreAeropuerto
-  Ciudad
+   Las claves candidatas son: 
+    -codAeropuerto
+    -NombreAeropuerto
+    -Ciudad
 
 ### Paso 2:
   La 1FN no se cumple ya que los campos codAeropuerto, NombreAeropuerto y Distancia_km 
