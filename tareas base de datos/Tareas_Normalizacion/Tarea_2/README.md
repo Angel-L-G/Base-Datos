@@ -1,6 +1,6 @@
-# Tarea 1
-## Gestión de Aeropuertos
-Se ha creado una base de datos con los datos de ciudades y sus aeropuertos. Los campos y los tipos de datos son los que se indican a continuación:
+# Tarea 2
+## Gestión Escuela de Topografía de Madrid
+Se ha creado una base de datos para llevar las calificaciones de las asignaturas de los alumnos de primer curso de la Escuela de Topografía de Madrid. La tabla creada tiene los siguientes campos
 
     DNI varchar (20).
     Apellidos varchar (255).
