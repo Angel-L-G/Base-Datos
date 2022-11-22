@@ -68,28 +68,28 @@ Además la información que se aporta es:
   | 5436725H | juárez Lis | Ana | Bailén  45| Bargas | Toledo | Castilla de la Mancha |
 
   **Persona_Asignatura**
-  | *DNI* | *Codigo* |
-  | ----- | -------- |
-  | 6754567B | 125002112 |
-  | 6754567B | 125001106 |
-  | 6754567B | 125001105 |
-  | 8976345K | 125002112 |
-  | 8976345K | 125002112 |
-  | 5436725H | 125004208 |
-  | 5436725H | 125002110 |
-  | 5436725H | 125002112 |
+  | *DNI* | *Codigo* | Nota |
+  | ----- | -------- | ---- |
+  | 6754567B | 125002112 | 8 |
+  | 6754567B | 125001106 | 7 |
+  | 6754567B | 125001105 | 6 |
+  | 8976345K | 125002112 | 9 |
+  | 8976345K | 125002112 | 6 |
+  | 5436725H | 125004208 | 5 |
+  | 5436725H | 125002110 | 8 |
+  | 5436725H | 125002112 | 9 |
   
   **Asignatura**
-  | DNI | *Codigo* | Asignatura | Nota |
-  | --- | -------- | ---------- | ---- |
-  | 6754567B | 125002112 | Base de Datos | 8 |
-  | 6754567B | 125001106 | Informática | 7 |
-  | 6754567B | 125001105 | Cartografía | 6 |
-  | 8976345K | 125002112 | Base de Datos | 9 |
-  | 8976345K | 125001104 | Geomática | 6 |
-  | 5436725H | 125004208 | Geomorfología | 5 |
-  | 5436725H | 125002110 | Topografía y G. | 8 |
-  | 5436725H | 125002112 | Base de Datos | 9 |
+  | DNI | *Codigo* | Asignatura |
+  | --- | -------- | ---------- |
+  | 6754567B | 125002112 | Base de Datos |
+  | 6754567B | 125001106 | Informática |
+  | 6754567B | 125001105 | Cartografía |
+  | 8976345K | 125002112 | Base de Datos |
+  | 8976345K | 125001104 | Geomática |
+  | 5436725H | 125004208 | Geomorfología |
+  | 5436725H | 125002110 | Topografía y G. |
+  | 5436725H | 125002112 | Base de Datos |
 
 ### Paso 4:
   La tabla resultado es la de Asignatura ya que todo va en relacion al suso dicho y contiene la FK , DNI , para relacionarse con las tabla principal
