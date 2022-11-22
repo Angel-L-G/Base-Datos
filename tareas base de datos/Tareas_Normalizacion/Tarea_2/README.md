@@ -61,8 +61,8 @@ Además la información que se aporta es:
 
 #### *N:M*<br/>
   **Persona**
-  | *DNI* | Apellidos | Nombre | Dirreccion | Ciudad | Provincia | Com_Aut |
-  | ----- | --------- | ------ | ---------- | ------ | --------- | ------- |
+  | *DNI* | Apellidos | Nombre | Direccion | Ciudad | Provincia | Com_Aut |
+  | ----- | --------- | ------ | --------- | ------ | --------- | ------- |
   | 6754567B | Ruiz García | Luis | Mayor 23 | Madrid | Madrid | Madrid |
   | 8976345K | Pérez Illán | Marta | Alcalá 123 | Madrid | Madrid | Madrid |
   | 5436725H | juárez Lis | Ana | Bailén  45| Bargas | Toledo | Castilla de la Mancha |
@@ -80,8 +80,8 @@ Además la información que se aporta es:
   | 5436725H | 125002112 | 9 |
   
   **Asignatura**
-  | DNI | *Codigo* | Asignatura |
-  | --- | -------- | ---------- |
+  | DNI | *Codigo* | Nombre |
+  | --- | -------- | ------ |
   | 6754567B | 125002112 | Base de Datos |
   | 6754567B | 125001106 | Informática |
   | 6754567B | 125001105 | Cartografía |
