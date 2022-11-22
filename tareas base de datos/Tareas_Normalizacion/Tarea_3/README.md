@@ -15,12 +15,13 @@ Tenemos una empresa publica donde los puestos de trabajo, están regulados por e
   | 333 | Miren | Admtivo | 1500 | mlopez@ecn.es / miren@gmail.com |
 
 ### Paso 3:
+
   **Empleado**
   | *NSS* | Nombre | Puesto | Salario |
   | ----- | ------ | ------ | ------- |
-  | 111 | pepe | España | 45 |
-  | 222 | josu | francia | 66 |
-  | 333 | miren | Gran Bretaña | 60 |
+  | 111 | pepe | jefe Area | 3000 |
+  | 222 | josu | Admtivo | 1500 |
+  | 333 | miren | Admtivo | 1500 |
   
   **Emails**
   | NSS | Emails |
