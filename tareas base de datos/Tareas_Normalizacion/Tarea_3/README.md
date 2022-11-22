@@ -15,7 +15,7 @@ Tenemos una empresa publica donde los puestos de trabajo, están regulados por e
   | 333 | Miren | Admtivo | 1500 | mlopez@ecn.es / miren@gmail.com |
 
 ### Paso 3:
-    ### La cardinalidad seria 1:N
+  ### La cardinalidad seria 1:N
   **Empleado**
   | *NSS* | Nombre | Puesto | Salario |
   | ----- | ------ | ------ | ------- |
