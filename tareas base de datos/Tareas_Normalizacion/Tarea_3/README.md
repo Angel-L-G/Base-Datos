@@ -78,3 +78,5 @@ No cumple la segunda forma normal ya que podemos sacar las columnas de puesto y 
         
 ### Paso 9:
   Genera el diagrama E/R resultante.
+
+![image](norm_3.drawio.png)
