@@ -3,7 +3,7 @@
     Tenemos una biblioteca que tiene como objetivo la gestión de la información de sus libros y lectores.
     La representación de la información dentro de la BBDD es la siguiente:
     
-| CodLibro | Titulo | Autor | Editorial | NombreLector | FechaDev |
+| *CodLibro* | Titulo | Autor | Editorial | NombreLector | FechaDev |
 | -------- | ------ | ----- | --------- | ------------ | -------- |
 | 1001 | Variable compleja | Murray Spiegel | McGraw Hill | Pérez Gómez, Juan | 15/04/2022 |
 | 1004 | Visual Basic 5 | E. Petroustsos | Anaya | Ríos Terán, Ana | 17/04/2022 |
@@ -16,7 +16,7 @@ Comprobar si se cumple la 1ª Forma Normal.
 Normalizar si no se cumple el apartado 2.
 
 **Libro**
-| CodLibro | Titulo | Autor | Editorial | FechaDev |
+| *CodLibro* | Titulo | Autor | Editorial | FechaDev |
 | -------- | ------ | ----- | --------- | -------- |
 | 1001 | Variable compleja | Murray Spiegel | McGraw Hill | 15/04/2022 |
 | 1004 | Visual Basic 5 | E. Petroustsos | Anaya | 17/04/2022 |
@@ -38,7 +38,7 @@ Comprobar si se cumple la 2ª Forma Normal.
 Normalizar si no se cumple el apartado 4.
 
 **Libro**
-| CodLibro | Titulo | Autor | Editorial |
+| *CodLibro* | Titulo | Autor | Editorial |
 | -------- | ------ | ----- | --------- |
 | 1001 | Variable compleja | Murray Spiegel | McGraw Hill |
 | 1004 | Visual Basic 5 | E. Petroustsos | Anaya |
