@@ -33,7 +33,7 @@ Normalizar si no se cumple el apartado 2.
 | 1006 | Luis  | García Roque |
 | 1007 | Juan | Pérez Gómez |
 
-### Paso 2FN:
+### 2FN:
 Comprobar si se cumple la 2ª Forma Normal.
 Normalizar si no se cumple el apartado 4.
 
