@@ -11,7 +11,7 @@
 | 1006 | Oracle University | Nancy Greenberg y Priya Nathan | Oracle Corp. | García Roque, Luis | 17/04/2022 |
 | 1007 | Clipper 5.01 | Ramalho | McGraw Hill | Pérez Gómez, Juan | 18/04/2022 |
 
-### Paso 1-2:
+### 1FN:
 Comprobar si se cumple la 1ª Forma Normal.
 Normalizar si no se cumple el apartado 2.
 
@@ -33,7 +33,7 @@ Normalizar si no se cumple el apartado 2.
 | 1006 | Luis  | García Roque |
 | 1007 | Juan | Pérez Gómez |
 
-### Paso 3-4:
+### Paso 2FN:
 Comprobar si se cumple la 2ª Forma Normal.
 Normalizar si no se cumple el apartado 4.
 
@@ -64,7 +64,7 @@ Normalizar si no se cumple el apartado 4.
 | 1006 | 20/04/2022  |
 | 1007 | 18/04/2022 |
 
-### Paso 5-6:
+### Paso 3FN:
 Comprobar si se cumple la 3ª Forma Normal.
 Normalizar si no se cumple el apartado 5.
 
