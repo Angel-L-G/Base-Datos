@@ -71,7 +71,7 @@ Normalizar si no se cumple el apartado 5.
 **Lecor**
 | Cod_Libro | Nombre | Apellido | *id_Persona* | FechaDev |
 | --------- | ------ | -------- | ------------ | ------ |
-| 1001 | Juan | Pérez Gómez | 1 |
+| 1001 | Juan | Pérez Gómez | 1 | 15/04/2022 |
 | 1004 | Ana  | Ríos Terán | 2 | 17/04/2022 |
 | 1005 | René | Roca | 3 |  16/04/2022 |
 | 1006 | Luis  | García Roque | 4 | 20/04/2022 |
