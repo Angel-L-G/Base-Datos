@@ -31,13 +31,17 @@ Esta tabla no cumple la 2FN ya que no todos los valores tienen relación con la 
 | 4 | Juan | Méndez |
 
 **Libro**
-| *cod_Libro* | titulo | editorial |
-| ----------- | ------ | --------- |
-| a | Aprender y enseñar en educación infantil | Graó |
-| b | Preescolar Rubio,N56 | Técnicas Rubio |
-| c | Aprender y enseñar en educación infantil | Graó |
-| d | educación infantil N9 | Prentice Hall |
-| e | Saber educar:guía para padres y profesores | Temas de Hoy |
+| *cod_Libro* | titulo | editorial | Fecha Prestamo |
+| ----------- | ------ | --------- | -------------- |
+| a | Aprender y enseñar en educación infantil | Graó | 09/09/2022 |
+| b | Preescolar Rubio,N56 | Técnicas Rubio | 05/05/2022 |
+| c | Aprender y enseñar en educación infantil | Graó | 05/05/2022 |
+| d | educación infantil N9 | Prentice Hall | 06/05/2022 |
+| a | Aprender y enseñar en educación infantil | Graó | 06/05/2022 |
+| a | Aprender y enseñar en educación infantil | Graó | 09/09/2022 |
+| e | Saber educar:guía para padres y profesores | Temas de Hoy | 05/05/2022 |
+| e | Saber educar:guía para padres y profesores | Temas de Hoy | 18/12/2022 |
+| a | Aprender y enseñar en educación infantil | Graó | 06/05/2022 |
 
 **Asignatura**
 | *id_Asignatura* | nombre |
