@@ -8,5 +8,5 @@
 ### Paso 5-6 ( 3FN )
 
 ### Paso 7
-
+![image](DiagramaExamen.drawio.png)
 ### Paso 8
