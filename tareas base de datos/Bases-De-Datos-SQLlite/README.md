@@ -1,42 +1,43 @@
 
 
 comandos para :
-    CREATE TABLE fabricante(
-	id_fab INTEGER,
-	nombre text,
-	pais TEXT,
-	PRIMARY KEY(id_fab)
-);
-CREATE TABLE programa(
-	codigo INTEGER,
-	nombre text,
-	version TEXT,
-	PRIMARY KEY(codigo)
-);
-CREATE TABLE cliente(
-	dni INTEGER,
-	nombre text,
-	edad TEXT,
-	PRIMARY KEY(dni)
-);
-CREATE TABLE desarrolla(
-	id_fab INTEGER,
-	codigo INTEGER,
-	PRIMARY KEY(id_fab,codigo)
-);
-CREATE TABLE distribuye(
-	cif INTEGER,
-	codigo INTEGER,
-	cantidad INTEGER,
-	PRIMARY KEY(cif,codigo)
-);
-CREATE TABLE registra(
-	cif INTEGER,
-	dni INTEGER,
-	codigo INTEGER,
-	medio TEXT,
-	PRIMARY KEY(cif,dni)
-);
+
+	    CREATE TABLE fabricante(
+		id_fab INTEGER,
+		nombre text,
+		pais TEXT,
+		PRIMARY KEY(id_fab)
+	);
+	CREATE TABLE programa(
+		codigo INTEGER,
+		nombre text,
+		version TEXT,
+		PRIMARY KEY(codigo)
+	);
+	CREATE TABLE cliente(
+		dni INTEGER,
+		nombre text,
+		edad TEXT,
+		PRIMARY KEY(dni)
+	);
+	CREATE TABLE desarrolla(
+		id_fab INTEGER,
+		codigo INTEGER,
+		PRIMARY KEY(id_fab,codigo)
+	);
+	CREATE TABLE distribuye(
+		cif INTEGER,
+		codigo INTEGER,
+		cantidad INTEGER,
+		PRIMARY KEY(cif,codigo)
+	);
+	CREATE TABLE registra(
+		cif INTEGER,
+		dni INTEGER,
+		codigo INTEGER,
+		medio TEXT,
+		PRIMARY KEY(cif,dni)
+	);
 
 LUEGO INSERTAS LAS TUPLAS
 
@@ -77,7 +78,7 @@ SELECT * FROM fabricante
 	
         k.¿Cuáles son los fabricantes no españoles? Utilizar el operador IN.
 SELECT * FROM fabricante
-  WHERE not pais="España";
+  WHERE pais not in("España");
 	
         l.Obtén un listado con los códigos de las distintas versiones de Windows.
 SELECT * FROM programa
@@ -88,34 +89,43 @@ SELECT ciudad,nombre FROM comercio
   WHERE nombre="El Corte Inglés";
 	
         o.¿Qué otros comercios hay, además de El Corte Inglés? Utilizar el operador IN.
-	
+SELECT nombre FROM comercio
+  WHERE nombre not in("El Corte Inglés");
 	
         p.Genera una lista con los códigos de las distintas versiones de Windows y Access. Utilizar el operador IN.
-	
+SELECT nombre,version FROM programa
+  WHERE nombre in ("Windows","Access");
 	
         q.Obtén un listado que incluya los nombres de los clientes de edades comprendidas entre 10 y 25 y de los mayores de 50 años. Da una solución con BETWEEN y otra sin BETWEEN.
-	
+SELECT nombre,edad FROM cliente
+  WHERE (edad BETWEEN 10 and 25) or (edad>50);
 	
         r.Saca un listado con los comercios de Sevilla y Madrid. No se admiten valores duplicados.
-	
+select distinct nombre from comercio
+  WHERE ciudad in ("Sevilla","Madrid");
 	
         s.¿Qué clientes terminan su nombre en la letra “o”?
-	
+SELECT * FROM cliente
+  where nombre REGEXP "o$";
 	
         t.¿Qué clientes terminan su nombre en la letra “o” y, además, son mayores de 30 años?
-	
+SELECT * FROM cliente
+  where nombre REGEXP "o$" and edad>30;
 	
         u.Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A o por una W.
-	
+SELECT * FROM programa
+  where version like "%i" or (nombre like "A%" or nombre like "W%");
 	
         w.Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A y termine por una S.
-	
+SELECT * FROM programa
+  where version like "%i" or (nombre like "A%" and nombre like "%S");
 	
         x.Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, y cuyo nombre no comience por una A.
-	
+SELECT * FROM programa
+  where version like "%i" or (nombre not like "A%");
 	
         y.Obtén una lista de empresas por orden alfabético ascendente.
-	
+SELECT * FROM fabricante ORDER by nombre ASC;
 	
         z.Genera un listado de empresas por orden alfabético descendente.
 	
