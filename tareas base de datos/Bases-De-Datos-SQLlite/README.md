@@ -108,12 +108,12 @@ select distinct nombre from comercio
   WHERE ciudad in ("Sevilla","Madrid");
 	
         s.¿Qué clientes terminan su nombre en la letra “o”?
-SELECT * FROM cliente
-  where nombre REGEXP "o$";
+SELECT nombre FROM cliente
+  where nombre like "%o %";
 	
         t.¿Qué clientes terminan su nombre en la letra “o” y, además, son mayores de 30 años?
-SELECT * FROM cliente
-  where nombre REGEXP "o$" and edad>30;
+SELECT nombre FROM cliente
+  where nombre like "%o %" and edad>30;
 	
         u.Obtén un listado en el que aparezcan los programas cuya versión finalice por una letra i, o cuyo nombre comience por una A o por una W.
 SELECT * FROM programa
@@ -131,13 +131,14 @@ SELECT * FROM programa
 SELECT * FROM fabricante ORDER by nombre ASC;
 	
         z.Genera un listado de empresas por orden alfabético descendente.
-SELECT * FROM fabricante ORDER by nombre ASC;
-	
-        aa.Obtén un listado de programas por orden de versión.
 SELECT * FROM fabricante ORDER by nombre DESC;
 	
+        aa.Obtén un listado de programas por orden de versión.
+SELECT nombre FROM programa ORDER by version ASC;
+	
         ab.Genera un listado de los programas que desarrolla Oracle.
-
+SELECT * FROM programa,desarrolla,fabricante
+  WHERE programa.codigo=desarrolla.codigo and desarrolla.id_fab=fabricante.id_fab and fabricante.nombre ="Oracle";
 	
         ac.¿Qué comercios distribuyen Windows?
 
