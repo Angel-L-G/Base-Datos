@@ -189,46 +189,59 @@ SELECT cliente.nombre FROM cliente,registra,programa
   WHERE cliente.dni=registra.dni AND registra.codigo=programa.codigo AND programa.nombre='Access' AND                   programa.version like 'XP%';
 	
         ap.Nombre de aquellos fabricantes cuyo país es el mismo que ʻOracleʼ. (Subconsulta).
-
+SELECT nombre FROM fabricante WHERE pais=(SELECT pais FROM fabricante WHERE nombre='Oracle');
 	
         aq.Nombre de aquellos clientes que tienen la misma edad que Pepe Pérez. (Subconsulta).
-
+SELECT nombre FROM cliente WHERE edad = (SELECT edad FROM cliente WHERE nombre="Pepe Pérez");
 	
         ar.Genera un listado con los comercios que tienen su sede en la misma ciudad que tiene el comercio ʻFNACʼ. (Subconsulta).
-
+SELECT nombre FROM comercio WHERE ciudad = (SELECT ciudad FROM comercio WHERE nombre="FNAC");
 	
         as.Nombre de aquellos clientes que han registrado un producto de la misma forma que el cliente ʻPepe Pérezʼ. (Subconsulta).
-
+SELECT cliente.nombre FROM cliente,registra WHERE registra.dni=cliente.dni AND registra.medio = (SELECT registra.medio FROM registra,cliente WHERE registra.dni=cliente.dni AND cliente.nombre='Pepe Pérez');
 	
-        at.Obtener el número de programas que hay en la tabla programas. 46 Calcula el número de clientes cuya edad es mayor de 40 años.
-
+        at.Obtener el número de programas que hay en la tabla programas. 
+SELECT count(nombre) from programa;
+	
+	46 Calcula el número de clientes cuya edad es mayor de 40 años.
+SELECT count(nombre) from cliente
+  WHERE edad>40;
 	
         au.Calcula el número de productos que ha vendido el establecimiento cuyo CIF es 1.
-
+SELECT count(distribuye.cantidad) FROM distribuye 
+  WHERE cif="1";
 	
         aw.Calcula la media de programas que se venden cuyo código es 7.
-
+SELECT avg(distribuye.cantidad) FROM distribuye 
+  WHERE codigo="7";
 	
         ax.Calcula la mínima cantidad de programas de código 7 que se ha vendido
-
+SELECT min(distribuye.cantidad) FROM distribuye 
+  WHERE codigo="7";
 	
         ay.Calcula la máxima cantidad de programas de código 7 que se ha vendido.
-
+SELECT max(distribuye.cantidad) FROM distribuye 
+  WHERE codigo="7";
 	
         az.¿En cuántos establecimientos se vende el programa cuyo código es 7?
-
+SELECT count(comercio.nombre) FROM comercio,programa,distribuye
+  WHERE comercio.cif=distribuye.cif and programa.codigo=distribuye.codigo and programa.codigo="7";
 	
         ba.Calcular el número de registros que se han realizado por Internet.
-
+SELECT count(*) from registra
+  WHERE medio="Internet";
 	
         bb.Obtener el número total de programas que se han vendido en ʻSevillaʼ.
-
+SELECT count(programa.nombre) from programa,distribuye,comercio
+  WHERE programa.codigo=distribuye.codigo and comercio.cif=distribuye.cif and ciudad=
+  (SELECT ciudad FROM comercio WHERE ciudad="Sevilla");
 	
         bc.Calcular el número total de programas que han desarrollado los fabricantes cuyo país es ʻEstados Unidosʼ.
-
+SELECT count(programa.nombre) from programa,desarrolla,fabricante
+  WHERE desarrolla.codigo=programa.codigo and fabricante.id_fab=desarrolla.id_fab and fabricante.pais="Estados Unidos"
 	
         be.Visualiza el nombre de todos los clientes en mayúscula. En el resultado de la consulta debe aparecer también la longitud de la cadena nombre.
-
+SELECT upper(nombre), length(nombre) from cliente;
 	
         bf.Con una consulta concatena los campos nombre y versión de la tabla PROGRAMA.
-
+SELECT nombre || version FROM programa
