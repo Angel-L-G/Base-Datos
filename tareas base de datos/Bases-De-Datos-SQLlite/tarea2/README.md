@@ -146,6 +146,8 @@ Listar las diferentes marcas de celular en orden alfabético descendentemente
     
 Listar las diferentes compañias en orden alfabético aleatorio
 
+	SELECT marca from Usuario ORDER by random();
+
 SELECT marca from Usuario ORDER by random();
     
 Listar el login de los usuarios con nivel 0 o 2
