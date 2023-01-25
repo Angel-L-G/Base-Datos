@@ -54,19 +54,23 @@ SELECT * from empleado
 SELECT * from empleado
 	WHERE id_departamento in (10,5);
 --7 Obtener todos los datos de los empleados cuyo apellido comience por P.
-
+SELECT * from empleado
+	WHERE apellido like "P%";
 --8 Obtener el presupuesto total de todos los departamentos.
-
+SELECT sum(presupuesto) from departamento
 --9 Obtener el número de empleados en cada departamento.
-
+SELECT count(nombre),id_departamento from empleado GROUP by	id_departamento;
 --10 Obtener un listado completo de empleados, incluyendo por cada empleado los datos del empleado y de su departamento.
-
+SELECT * from empleado;
 --11 Obtener un listado completo de empleados, incluyendo el nombre y apellido del empleado junto al nombre y presupuesto de su departamento.
-
+SELECT * from empleado,departamento
+	WHERE empleado.id_departamento=departamento.id;
 --12 Obtener los nombres y apellido de los empleados que trabajen en departamentos cuyo presupuesto sea mayor de 60.000 €.
-
+SELECT empleado.nombre,empleado.apellido from empleado,departamento
+	WHERE empleado.id_departamento=departamento.id and presupuesto>60000;
 --13 Obtener los datos de los departamentos cuyo presupuesto es superior al presupuesto medio de todos los departamentos.
-
+SELECT departamento.id,departamento.nombre,departamento.presupuesto from empleado,departamento
+	WHERE empleado.id_departamento=departamento.id and presupuesto>(SELECT avg(presupuesto) from departamento);
 --14 Obtener los nombres (únicamente los nombres) de los departamentos que tiene más de dos empleados.
 
 --15 Añadir un nuevo departamento: “Calidad”, con presupuesto de 40.000 € y código 11.
