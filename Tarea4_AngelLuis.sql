@@ -72,15 +72,18 @@ SELECT empleado.nombre,empleado.apellido from empleado,departamento
 SELECT departamento.id,departamento.nombre,departamento.presupuesto from empleado,departamento
 	WHERE empleado.id_departamento=departamento.id and presupuesto>(SELECT avg(presupuesto) from departamento);
 --14 Obtener los nombres (únicamente los nombres) de los departamentos que tiene más de dos empleados.
-
+select departamento.nombre, count(empleado.nombre) as cuenta from departamento,empleado
+	WHERE id_departamento=departamento.id
+	group by departamento.id
+	having cuenta>2;
 --15 Añadir un nuevo departamento: “Calidad”, con presupuesto de 40.000 € y código 11.
-
+INSERT INTO departamento VALUES ( "11","Calidad" ,"40000" );
 --16 Añadir un empleado vinculado al departamento recién creado: Esther Vázquez, DNI:00000000.
-
+INSERT INTO empleado VALUES ( "00000000","Esther" ,"Vázquez" ,"11" );
 --17 Calcular un recorte presupuestario del 10 % a todos los departamentos.
-
+SELECT presupuesto*0.10 from departamento;
 --18 Despedir a todos los empleados que trabajan para el departamento de informática (código 2).
-
+delete from empleado where id_departamento='2';
 --19 Despedir a todos los empleados que trabajen para departamentos cuyo presupuesto sea superior a los 60.000 €.
 
 --20 Despedir a todos los empleados.
