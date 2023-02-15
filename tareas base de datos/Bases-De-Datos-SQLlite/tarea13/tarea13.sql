@@ -176,8 +176,18 @@ codigo      nombre
 Consultas con multitabla con LEFT JOIN y RIGHT JOIN
 
     Devuelve un listado de todos los fabricantes que existen en la base de datos, junto con los productos que tiene cada uno de ellos. El listado deberá mostrar también aquellos fabricantes que no tienen productos asociados.
-*//*
-
+*/select * from fabricante join producto where fabricante.codigo=producto.codigo_fabricante;/*
+codigo  nombre           codigo  nombre                   precio  codigo_fabricante
+------  ---------------  ------  -----------------------  ------  -----------------
+1       Asus             1       Disco duro SATA3 1TB     86.99   5                
+2       Lenovo           2       Memoria RAM DDR4 8GB     120.0   6                
+3       Hewlett-Packard  3       Disco SSD 1 TB           150.99  4                
+4       Samsung          4       GeForce GTX 1050Ti       185.0   7                
+5       Seagate          5       GeForce GTX 1080 Xtreme  755.0   6                
+6       Crucial          6       Monitor 24 LED Full HD   202.0   1                
+7       Gigabyte         7       Monitor 27 LED Full HD   245.99  1                
+8       Huawei           8       Portátil Yoga 520        559.0   2                
+9       Xiaomi           9       Portátil Ideapd 320      444.0   2
     Devuelve un listado donde sólo aparezcan aquellos fabricantes que no tienen ningún producto asociado.
 *//*
 
