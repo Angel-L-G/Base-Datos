@@ -1,9 +1,13 @@
 --Crear base de datos
 
-
+```sql
+CREATE DATABASE clientes
+USE clientes
+```
 
 --Create table
 
+```sql
 DROP TABLE Persona IF EXISTS;
 CREATE TABLE Persona(
     dni varchar(9) Primary key,
@@ -11,12 +15,58 @@ CREATE TABLE Persona(
     apellido1 varchar(20),
     apellido2 varchar(20),
     peso Integer unsigned,
-    sexo ENUM("H","M"),
+    sexo varchar(1),
 );
+```
 
 --Insert
 
-INSERT INTO Personas VALUES("00000000A","Angel","Luis","Garcia","64","H");
+```sql
+drop function if exist introducir_info;
+delimiter //
+create function introducir_info(in dni varchar(9), in nombre varchar(20), 
+                                in ap1 varchar(20), in ap2 varchar(20), 
+                                in peso int, in sexo varchar(1))
+begin
+    INSERT INTO Personas VALUES(dni,nombre,ap1,ap2,peso,sexo);
+end //
 
---Procedures
+call introducir_info("00000000A","Angel","Luis","Garcia","64","H");
+call introducir_info("10000000A","Luis","Gonzalez","Garcia","50","H");
+call introducir_info("01000000A","Pedro","Luis","Garcia","80","H");
+call introducir_info("00100000A","Juan","Luis","Gonzalez","59","H");
+call introducir_info("00010000A","Javier","Gonzalez","Gonzalez","73","H");
+
+call introducir_info("00001000A","Angela","Luis","Gonzalez","64","M");
+call introducir_info("00000100A","Luisa","Luis","Garcia","54","M");
+call introducir_info("00000010A","Eva","Luis","Gonzalez","69","M");
+call introducir_info("00000001A","Juana","Gonzalez","Gonzalez","70","M");
+call introducir_info("00000000B","Maria","Gonzalez","Garcia","79","M");
+
+-- Procedures
+--Que actualice el nombre de un cliente. Ayuda (recibe dos parámetros, el identificador aactualizar y el nuevo nombre).
+drop function if exist cambiar_nombre;
+delimiter//
+create function cambiar_nombre(in dniIn varchar(9), in nombreNuevo varchar(20))
+begin
+    update Persona set nombre = nuevo_nombre where dni = dniIn;
+end //
+
+call cambiar_nombre("00000000A","Julio");
+
+--Que elimine un cliente. Ayuda (recibe un parámetro, identificador se va eliminar.
+drop function if exist drop_cliente;
+delimiter//
+create function drop_cliente(in dniIn varchar(9))
+begin
+    delete Persona where dni = dniIn;
+end //
+
+call drop_cliente("00000000A");
+--Investigar procedimientos con paramentaros de salida.
+
+
+
+--Investigar cómo hacer un ciclo (while).
+
 
