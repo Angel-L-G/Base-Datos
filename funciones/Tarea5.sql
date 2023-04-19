@@ -22,6 +22,7 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
     --Función subsidio_transporte: El subsidio de transporte equivale al 7% al salario básico.
         DELIMITER //
         CREATE FUCNTION subsidio_transporte(base double) RETURNS double
+        Deterministic
         BEGIN
             declare res double;
             declare mod double;
@@ -32,6 +33,7 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
     --Función salud: La salud que corresponde al 4% al salario básico.
         DELIMITER //
         CREATE FUCNTION salud(base double) RETURNS double
+        Deterministic
         BEGIN
             declare res double;
             declare mod double;
@@ -42,6 +44,7 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
     --Función pension: La pensión que corresponde al 4% al salario básico
         DELIMITER //
         CREATE FUCNTION pension(base double) RETURNS double
+        Deterministic
         BEGIN
             declare res double;
             declare mod double;
@@ -52,6 +55,7 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
     --Función bono: Un bono que corresponde al 8% al salario básico.
         DELIMITER //
         CREATE FUCNTION bono(base double) RETURNS double
+        Deterministic
         BEGIN
             declare res double;
             declare mod double;
@@ -62,6 +66,7 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
     --Función integral: El salario integral es la suma del salario básico - salud - pension + bono + sub de transporte.
         DELIMITER //
         CREATE FUCNTION integral(base double) RETURNS double
+        Deterministic
         BEGIN
             declare res double;
             DECLARE salud double;
