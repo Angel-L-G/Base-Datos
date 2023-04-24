@@ -74,10 +74,10 @@ INSERT INTO persona VALUES(3090.1,"Ruben");
             DECLARE bono double;
             DECLARE subT double;
 
-            set salud = call salud(base);
-            set pension = call pension(base);
-            set bono = call bono(base);
-            set subT = call subT(base);
+            set salud = salud(base);
+            set pension = pension(base);
+            set bono = bono(base);
+            set subT = subT(base);
 
             set res = base - salud - pension + bono + subT;
 
