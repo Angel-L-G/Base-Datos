@@ -1,6 +1,6 @@
-### Solucion
+# Solucion
   
-#### Crear base de datos y seleccionarla
+## Crear base de datos y seleccionarla
 
 ```sql
 CREATE DATABASE salario;
@@ -23,45 +23,45 @@ CREATE TABLE persona (
 );
 ```
 
-#### Creacion del procedimiento crear_persona y llamada
+## Creacion del procedimiento insert_persona
 
 ```sql
 DELIMITER $$
-DROP PROCEDURE IF EXISTS crear_persona$$
-CREATE PROCEDURE crear_persona(in cantidad int unsigned)
+DROP PROCEDURE IF EXISTS insert_persona$$
+CREATE PROCEDURE insert_persona(in cantidad int)
 BEGIN
-	declare variable varchar(10);
-	declare contador int default 1;
+    declare variable varchar(10);
+    declare contador int default 1;
     declare salario int;
     declare copia int;
     declare nombre text;
     
-	set contador = (select count(*) from persona) + 1;
-	set copia = contador - 1;
+    set contador = (select count(*) from persona) + 1;
+    set copia = contador - 1;
     
-    set variable = concat('0000', 1);
+    set variable = concat('0', 1);
     while contador <= cantidad + copia
     do
-		set salario = contador * contador;
-		set variable = concat('0000', contador);
-        set nombre = concat('pepe', contador);
-		insert into persona values (variable, nombre, salario, 7, 4, 4, 8, 1);
-		set contador = contador + 1;
+	set salario = contador * contador;
+	set variable = concat('0', contador);
+        set nombre = concat('pp', contador);
+	insert into persona values (variable, nombre, salario, 8, 5, 3, 9, 2);
+	set contador = contador + 1;
     end while;
 END
 $$
 
 DELIMITER ;
-CALL crear_persona(10);
+CALL insert_persona(10);
 ;
 ```
 
-#### Creación de la función obtener_salario y llamada
+## Creación de la función get_salario
 
 ```sql
 DELIMITER $$
-DROP FUNCTION IF EXISTS obtener_salario$$
-CREATE FUNCTION obtener_salario(identificador varchar(10)) RETURNS DOUBLE
+DROP FUNCTION IF EXISTS get_salario$$
+CREATE FUNCTION get_salario(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
 	DECLARE salario DOUBLE;
@@ -75,11 +75,11 @@ END
 $$
 
 DELIMITER ;
-SELECT obtener_salario('00001');
+SELECT get_salario('00001');
 ;
 ```
 
-#### Creación de la función calcular_porcentaje y llamada
+## Creación de la función calcular_porcentaje y llamada
 
 ```sql
 DELIMITER $$
