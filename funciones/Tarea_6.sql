@@ -53,7 +53,7 @@ $$
 
 DELIMITER ;
 CALL insert_persona(10);
-;
+
 ```
 
 ## Creación de la función get_salario
@@ -64,43 +64,43 @@ DROP FUNCTION IF EXISTS get_salario$$
 CREATE FUNCTION get_salario(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE salario DOUBLE;
+    DECLARE salario DOUBLE;
 	
-	set salario = (SELECT persona.salario_base
-    FROM persona
-    WHERE persona.identificador=identificador);
+    set salario = (SELECT persona.salario_base
+    FROM persona as p
+    WHERE p.identificador=identificador);
     
     return salario;
 END
 $$
 
 DELIMITER ;
-SELECT get_salario('00001');
-;
+SELECT get_salario('01');
+
 ```
 
-## Creación de la función calcular_porcentaje y llamada
+## Creación de la función porcentaje y llamada
 
 ```sql
 DELIMITER $$
-DROP FUNCTION IF EXISTS calcular_porcentaje$$
-CREATE FUNCTION calcular_porcentaje(identificador varchar(10), porcentaje double) RETURNS DOUBLE
+DROP FUNCTION IF EXISTS porcentaje$$
+CREATE FUNCTION porcentaje(identificador varchar(10), porcentaje double) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE resultado DOUBLE;
+    DECLARE res DOUBLE;
     
-    set resultado = obtener_salario(identificador) * porcentaje;
+    set res = get_salario(identificador) * porcentaje;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT calcular_porcentaje('00001');
-;
+SELECT porcentaje('01');
+
 ```
 
-#### Creación de la función subsidio y llamada
+## Creación de la función subsidio y llamada
 
 ```sql
 DELIMITER $$
@@ -108,24 +108,22 @@ DROP FUNCTION IF EXISTS subsidio$$
 DETERMINISTIC
 CREATE FUNCTION subsidio(identificador varchar(10)) RETURNS DOUBLE
 BEGIN
-	DECLARE resultado DOUBLE;
+    DECLARE res DOUBLE;
 	
-	set resultado = calcular_porcentaje(identificador, 0.07);
-    
-    UPDATE persona set persona.subsidio=resultado
+    set resultado = porcentaje(identificador, 0.07);
+    UPDATE persona set persona.subsidio=res
     WHERE persona.identificador=identificador;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT subsidio('00001');
-;
+SELECT subsidio('01');
 
 ```
 
-#### Creación de la función salud y llamada
+## Creación de la función salud y llamada
 
 ```sql
 DELIMITER $$
@@ -133,23 +131,23 @@ DROP FUNCTION IF EXISTS salud$$
 CREATE FUNCTION salud(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE resultado DOUBLE;
+	DECLARE res DOUBLE;
 	
-	set resultado = calcular_porcentaje(identificador, 0.04);
+	set res = porcentaje(identificador, 0.04);
     
-    UPDATE persona set persona.salud=resultado
+    UPDATE persona set persona.salud=res
     WHERE persona.identificador=identificador;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT salud('00001');
-;
+SELECT salud('01');
+
 ```
 
-#### Creación de la función pension y llamada
+## Creación de la función pension y llamada
 
 ```sql
 DELIMITER $$
@@ -157,23 +155,23 @@ DROP FUNCTION IF EXISTS pension$$
 CREATE FUNCTION pension(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE resultado DOUBLE;
+	DECLARE res DOUBLE;
 	
-	set resultado = calcular_porcentaje(identificador, 0.04);
+	set res = porcentaje(identificador, 0.04);
     
-    UPDATE persona set persona.pension=resultado
+    UPDATE persona set persona.pension=res
     WHERE persona.identificador=identificador;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT pension('00001');
-;
+SELECT pension('01');
+
 ```
 
-#### Creación de la función bono y llamada
+## Creación de la función bono y llamada
 
 ```sql
 DELIMITER $$
@@ -181,23 +179,23 @@ DROP FUNCTION IF EXISTS bono$$
 CREATE FUNCTION bono(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE resultado DOUBLE;
+    DECLARE resultado DOUBLE;
 	
-	set resultado = calcular_porcentaje(identificador, 0.08);
+    set res = porcentaje(identificador, 0.08);
     
-    UPDATE persona set persona.bono=resultado
+    UPDATE persona set persona.bono=res
     WHERE persona.identificador=identificador;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT bono('00001');
-;
+SELECT bono('01');
+
 ```
 
-#### Creación de la función integral y llamada
+## Creación de la función integral y llamada
 
 ```sql
 DELIMITER $$
@@ -205,18 +203,18 @@ DROP FUNCTION IF EXISTS integral$$
 CREATE FUNCTION integral(id varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-	DECLARE resultado DOUBLE;
+    DECLARE res DOUBLE;
 	
-	set resultado = obtener_salario(id) - salud(id) - pension(id) + bono(id) + subsidio(id);
+    set res = obtener_salario(id) - salud(id) - pension(id) + bono(id) + subsidio(id);
     
-    UPDATE persona set persona.integral=resultado
+    UPDATE persona set persona.integral=res
     WHERE persona.identificador=identificador;
     
-    return resultado;
+    return res;
 END
 $$
 
 DELIMITER ;
-SELECT integral('12345678A');
-;
+SELECT integral('01');
+
 ```
