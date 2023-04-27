@@ -11,6 +11,7 @@ USE salario;
 #### Crear tabla persona
 
 ```sql
+drop table if exists persona;
 CREATE TABLE persona (
 	identificador varchar(10) PRIMARY KEY,
 	nombre TEXT,
