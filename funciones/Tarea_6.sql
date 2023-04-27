@@ -22,6 +22,8 @@ CREATE TABLE persona (
 	bono DOUBLE,
 	integral DOUBLE
 );
+
+select * from p;
 ```
 
 ## Creacion del procedimiento insert_persona
@@ -54,6 +56,7 @@ $$
 
 DELIMITER ;
 CALL insert_persona(10);
+select * from persona;
 
 ```
 
@@ -67,14 +70,13 @@ DETERMINISTIC
 BEGIN
     DECLARE salario DOUBLE;
 	
-    set salario = (SELECT persona.salario_base
+    set salario = (SELECT salario_base
     FROM persona as p
     WHERE p.identificador=identificador);
     
     return salario;
 END
 $$
-
 DELIMITER ;
 SELECT get_salario('01');
 
@@ -95,9 +97,8 @@ BEGIN
     return res;
 END
 $$
-
 DELIMITER ;
-SELECT porcentaje('01');
+SELECT porcentaje('01',0.07);
 
 ```
 
@@ -106,21 +107,20 @@ SELECT porcentaje('01');
 ```sql
 DELIMITER $$
 DROP FUNCTION IF EXISTS subsidio$$
-DETERMINISTIC
 CREATE FUNCTION subsidio(identificador varchar(10)) RETURNS DOUBLE
+DETERMINISTIC
 BEGIN
     DECLARE res DOUBLE;
 	
-    set resultado = porcentaje(identificador, 0.07);
-    UPDATE persona set persona.subsidio=res
-    WHERE persona.identificador=identificador;
+    set res = porcentaje(identificador, 0.07);
+    UPDATE persona as p set p.subsidio=res
+    WHERE p.identificador=identificador;
     
     return res;
 END
 $$
-
 DELIMITER ;
-SELECT subsidio('01');
+SELECT subsidio('01');;
 
 ```
 
@@ -136,13 +136,12 @@ BEGIN
 	
 	set res = porcentaje(identificador, 0.04);
     
-    UPDATE persona set persona.salud=res
-    WHERE persona.identificador=identificador;
+    UPDATE persona as p set p.salud=res
+    WHERE p.identificador=identificador;
     
     return res;
 END
 $$
-
 DELIMITER ;
 SELECT salud('01');
 
@@ -151,7 +150,7 @@ SELECT salud('01');
 ## Creación de la función pension y llamada
 
 ```sql
-DELIMITER $$
+ELIMITER $$
 DROP FUNCTION IF EXISTS pension$$
 CREATE FUNCTION pension(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
@@ -166,7 +165,6 @@ BEGIN
     return res;
 END
 $$
-
 DELIMITER ;
 SELECT pension('01');
 
@@ -180,17 +178,16 @@ DROP FUNCTION IF EXISTS bono$$
 CREATE FUNCTION bono(identificador varchar(10)) RETURNS DOUBLE
 DETERMINISTIC
 BEGIN
-    DECLARE resultado DOUBLE;
+    DECLARE res DOUBLE;
 	
     set res = porcentaje(identificador, 0.08);
     
-    UPDATE persona set persona.bono=res
-    WHERE persona.identificador=identificador;
+    UPDATE persona as p set p.bono=res
+    WHERE p.identificador=identificador;
     
     return res;
 END
 $$
-
 DELIMITER ;
 SELECT bono('01');
 
@@ -206,15 +203,14 @@ DETERMINISTIC
 BEGIN
     DECLARE res DOUBLE;
 	
-    set res = obtener_salario(id) - salud(id) - pension(id) + bono(id) + subsidio(id);
+    set res = get_salario(id) - salud(id) - pension(id) + bono(id) + subsidio(id);
     
-    UPDATE persona set persona.integral=res
-    WHERE persona.identificador=identificador;
+    UPDATE persona as p set p.integral=res
+    WHERE p.identificador=identificador;
     
     return res;
 END
 $$
-
 DELIMITER ;
 SELECT integral('01');
 
