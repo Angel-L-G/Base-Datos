@@ -33,55 +33,30 @@ select count(*) from film_text;
         */
     --Actores que tienen de apellido Johansson.
         select * from actor where last_name regexp "Johansson";
-        +----------+------------+-----------+---------------------+
+        /*+----------+------------+-----------+---------------------+
         | actor_id | first_name | last_name | last_update         |
         +----------+------------+-----------+---------------------+
         |        8 | MATTHEW    | JOHANSSON | 2006-02-15 04:34:33 |
         |       64 | RAY        | JOHANSSON | 2006-02-15 04:34:33 |
         |      146 | ALBERT     | JOHANSSON | 2006-02-15 04:34:33 |
         +----------+------------+-----------+---------------------+
+        */
     --Actores que contengan una O en su nombre.
-        select * from actor where first_name regexp "o";
-        /*+----------+-------------+--------------+---------------------+
-        | actor_id | first_name  | last_name    | last_update         |
-        +----------+-------------+--------------+---------------------+
-        |        1 | PENELOPE    | GUINESS      | 2006-02-15 04:34:33 |
-        |        5 | JOHNNY      | LOLLOBRIGIDA | 2006-02-15 04:34:33 |
-        |        9 | JOE         | SWANK        | 2006-02-15 04:34:33 |
-        |       11 | ZERO        | CAGE         | 2006-02-15 04:34:33 |
-        |       19 | BOB         | FAWCETT      | 2006-02-15 04:34:33 |
-        |       24 | CAMERON     | STREEP       | 2006-02-15 04:34:33 |
-        |       28 | WOODY       | HOFFMAN      | 2006-02-15 04:34:33 |
-        |       38 | TOM         | MCKELLEN     | 2006-02-15 04:34:33 |
-        |       39 | GOLDIE      | BRODY        | 2006-02-15 04:34:33 |
-        |       40 | JOHNNY      | CAGE         | 2006-02-15 04:34:33 |
-        |       41 | JODIE       | DEGENERES    | 2006-02-15 04:34:33 |
-        |       42 | TOM         | MIRANDA      | 2006-02-15 04:34:33 |
-        |       54 | PENELOPE    | PINKETT      | 2006-02-15 04:34:33 |
-        |       63 | CAMERON     | WRAY         | 2006-02-15 04:34:33 |
-        |       78 | GROUCHO     | SINATRA      | 2006-02-15 04:34:33 |
-        |       82 | WOODY       | JOLIE        | 2006-02-15 04:34:33 |
-        |       91 | CHRISTOPHER | BERRY        | 2006-02-15 04:34:33 |
-        |      104 | PENELOPE    | CRONYN       | 2006-02-15 04:34:33 |
-        |      106 | GROUCHO     | DUNST        | 2006-02-15 04:34:33 |
-        |      111 | CAMERON     | ZELLWEGER    | 2006-02-15 04:34:33 |
-        |      113 | MORGAN      | HOPKINS      | 2006-02-15 04:34:33 |
-        |      114 | MORGAN      | MCDORMAND    | 2006-02-15 04:34:33 |
-        |      115 | HARRISON    | BALE         | 2006-02-15 04:34:33 |
-        |      120 | PENELOPE    | MONROE       | 2006-02-15 04:34:33 |
-        |      137 | MORGAN      | WILLIAMS     | 2006-02-15 04:34:33 |
-        |      140 | WHOOPI      | HURT         | 2006-02-15 04:34:33 |
-        |      151 | GEOFFREY    | HESTON       | 2006-02-15 04:34:33 |
-        |      162 | OPRAH       | KILMER       | 2006-02-15 04:34:33 |
-        |      163 | CHRISTOPHER | WEST         | 2006-02-15 04:34:33 |
-        |      171 | OLYMPIA     | PFEIFFER     | 2006-02-15 04:34:33 |
-        |      172 | GROUCHO     | WILLIAMS     | 2006-02-15 04:34:33 |
-        |      176 | JON         | CHASE        | 2006-02-15 04:34:33 |
-        |      188 | ROCK        | DUKAKIS      | 2006-02-15 04:34:33 |
-        |      191 | GREGORY     | GOODING      | 2006-02-15 04:34:33 |
-        |      192 | JOHN        | SUVARI       | 2006-02-15 04:34:33 |
-        |      200 | THORA       | TEMPLE       | 2006-02-15 04:34:33 |
-        +----------+-------------+--------------+---------------------+
+        select * from actor where first_name regexp "o" limit 10;
+        /*+----------+------------+--------------+---------------------+
+        | actor_id | first_name | last_name    | last_update         |
+        +----------+------------+--------------+---------------------+
+        |        1 | PENELOPE   | GUINESS      | 2006-02-15 04:34:33 |
+        |        5 | JOHNNY     | LOLLOBRIGIDA | 2006-02-15 04:34:33 |
+        |        9 | JOE        | SWANK        | 2006-02-15 04:34:33 |
+        |       11 | ZERO       | CAGE         | 2006-02-15 04:34:33 |
+        |       19 | BOB        | FAWCETT      | 2006-02-15 04:34:33 |
+        |       24 | CAMERON    | STREEP       | 2006-02-15 04:34:33 |
+        |       28 | WOODY      | HOFFMAN      | 2006-02-15 04:34:33 |
+        |       38 | TOM        | MCKELLEN     | 2006-02-15 04:34:33 |
+        |       39 | GOLDIE     | BRODY        | 2006-02-15 04:34:33 |
+        |       40 | JOHNNY     | CAGE         | 2006-02-15 04:34:33 |
+        +----------+------------+--------------+---------------------+
         */
     --Actores que contengan una O en su nombre y en una A en su apellido.
         select * from actor where first_name regexp "o" and last_name regexp "a";
@@ -107,7 +82,7 @@ select count(*) from film_text;
         +----------+------------+--------------+---------------------+
         */
     --Actores que contengan dos O en su nombre y en una A en su apellido.
-        select * from actor where first_name regexp "o{2}" and last_name regexp "a";
+        select * from actor where first_name regexp "(o{2}|o.*o.*)" and last_name regexp "a";
         /*+----------+------------+-----------+---------------------+
         | actor_id | first_name | last_name | last_update         |
         +----------+------------+-----------+---------------------+
@@ -123,92 +98,38 @@ select count(*) from film_text;
         +----------+------------+-----------+---------------------+
         */
     --Ciudades que empiezan por a.
-        select * from city where city regexp "^a";
-        /*+---------+-------------------------+------------+---------------------+
-        | city_id | city                    | country_id | last_update         |
-        +---------+-------------------------+------------+---------------------+
-        |       1 | A Coruña (La Coruña)    |         87 | 2006-02-15 04:45:25 |
-        |       2 | Abha                    |         82 | 2006-02-15 04:45:25 |
-        |       3 | Abu Dhabi               |        101 | 2006-02-15 04:45:25 |
-        |       4 | Acuña                   |         60 | 2006-02-15 04:45:25 |
-        |       5 | Adana                   |         97 | 2006-02-15 04:45:25 |
-        |       6 | Addis Abeba             |         31 | 2006-02-15 04:45:25 |
-        |       7 | Aden                    |        107 | 2006-02-15 04:45:25 |
-        |       8 | Adoni                   |         44 | 2006-02-15 04:45:25 |
-        |       9 | Ahmadnagar              |         44 | 2006-02-15 04:45:25 |
-        |      10 | Akishima                |         50 | 2006-02-15 04:45:25 |
-        |      11 | Akron                   |        103 | 2006-02-15 04:45:25 |
-        |      12 | al-Ayn                  |        101 | 2006-02-15 04:45:25 |
-        |      13 | al-Hawiya               |         82 | 2006-02-15 04:45:25 |
-        |      14 | al-Manama               |         11 | 2006-02-15 04:45:25 |
-        |      15 | al-Qadarif              |         89 | 2006-02-15 04:45:25 |
-        |      16 | al-Qatif                |         82 | 2006-02-15 04:45:25 |
-        |      17 | Alessandria             |         49 | 2006-02-15 04:45:25 |
-        |      18 | Allappuzha (Alleppey)   |         44 | 2006-02-15 04:45:25 |
-        |      19 | Allende                 |         60 | 2006-02-15 04:45:25 |
-        |      20 | Almirante Brown         |          6 | 2006-02-15 04:45:25 |
-        |      21 | Alvorada                |         15 | 2006-02-15 04:45:25 |
-        |      22 | Ambattur                |         44 | 2006-02-15 04:45:25 |
-        |      23 | Amersfoort              |         67 | 2006-02-15 04:45:25 |
-        |      24 | Amroha                  |         44 | 2006-02-15 04:45:25 |
-        |      25 | Angra dos Reis          |         15 | 2006-02-15 04:45:25 |
-        |      26 | Anápolis                |         15 | 2006-02-15 04:45:25 |
-        |      27 | Antofagasta             |         22 | 2006-02-15 04:45:25 |
-        |      28 | Aparecida de Goiânia    |         15 | 2006-02-15 04:45:25 |
-        |      29 | Apeldoorn               |         67 | 2006-02-15 04:45:25 |
-        |      30 | Araçatuba               |         15 | 2006-02-15 04:45:25 |
-        |      31 | Arak                    |         46 | 2006-02-15 04:45:25 |
-        |      32 | Arecibo                 |         77 | 2006-02-15 04:45:25 |
-        |      33 | Arlington               |        103 | 2006-02-15 04:45:25 |
-        |      34 | Ashdod                  |         48 | 2006-02-15 04:45:25 |
-        |      35 | Ashgabat                |         98 | 2006-02-15 04:45:25 |
-        |      36 | Ashqelon                |         48 | 2006-02-15 04:45:25 |
-        |      37 | Asunción                |         73 | 2006-02-15 04:45:25 |
-        |      38 | Athenai                 |         39 | 2006-02-15 04:45:25 |
-        |      39 | Atšinsk                 |         80 | 2006-02-15 04:45:25 |
-        |      40 | Atlixco                 |         60 | 2006-02-15 04:45:25 |
-        |      41 | Augusta-Richmond County |        103 | 2006-02-15 04:45:25 |
-        |      42 | Aurora                  |        103 | 2006-02-15 04:45:25 |
-        |      43 | Avellaneda              |          6 | 2006-02-15 04:45:25 |
-        +---------+-------------------------+------------+---------------------+
-*/
+        select * from city where city regexp "^a" limit 10;
+        /*+---------+------------------------+------------+---------------------+
+        | city_id | city                   | country_id | last_update         |
+        +---------+------------------------+------------+---------------------+
+        |       1 | A Coruña (La Coruña)   |         87 | 2006-02-15 04:45:25 |
+        |       2 | Abha                   |         82 | 2006-02-15 04:45:25 |
+        |       3 | Abu Dhabi              |        101 | 2006-02-15 04:45:25 |
+        |       4 | Acuña                  |         60 | 2006-02-15 04:45:25 |
+        |       5 | Adana                  |         97 | 2006-02-15 04:45:25 |
+        |       6 | Addis Abeba            |         31 | 2006-02-15 04:45:25 |
+        |       7 | Aden                   |        107 | 2006-02-15 04:45:25 |
+        |       8 | Adoni                  |         44 | 2006-02-15 04:45:25 |
+        |       9 | Ahmadnagar             |         44 | 2006-02-15 04:45:25 |
+        |      10 | Akishima               |         50 | 2006-02-15 04:45:25 |
+        +---------+------------------------+------------+---------------------+
+        */
     --Ciudades que acaban por s.
-        select * from city where city regexp "s$";
-        /*+---------+----------------------------+------------+---------------------+
-        | city_id | city                       | country_id | last_update         |
-        +---------+----------------------------+------------+---------------------+
-        |      25 | Angra dos Reis             |         15 | 2006-02-15 04:45:25 |
-        |      26 | Anápolis                   |         15 | 2006-02-15 04:45:25 |
-        |      79 | Bilbays                    |         29 | 2006-02-15 04:45:25 |
-        |     102 | Caracas                    |        104 | 2006-02-15 04:45:25 |
-        |     118 | Ciomas                     |         45 | 2006-02-15 04:45:25 |
-        |     120 | Citrus Heights             |        103 | 2006-02-15 04:45:25 |
-        |     125 | Coatzacoalcos              |         60 | 2006-02-15 04:45:25 |
-        |     135 | Dallas                     |        103 | 2006-02-15 04:45:25 |
-        |     137 | Daugavpils                 |         54 | 2006-02-15 04:45:25 |
-        |     147 | Dos Quebradas              |         24 | 2006-02-15 04:45:25 |
-        |     190 | Águas Lindas de Goiás      |         15 | 2006-02-15 04:45:25 |
-        |     212 | Huejutla de Reyes          |         60 | 2006-02-15 04:45:25 |
-        |     221 | Imus                       |         75 | 2006-02-15 04:45:25 |
-        |     238 | Jelets                     |         80 | 2006-02-15 04:45:25 |
-        |     266 | Kilis                      |         97 | 2006-02-15 04:45:25 |
-        |     297 | Le Mans                    |         34 | 2006-02-15 04:45:25 |
-        |     330 | Matamoros                  |         60 | 2006-02-15 04:45:25 |
-        |     333 | Memphis                    |        103 | 2006-02-15 04:45:25 |
-        |     391 | Ozamis                     |         75 | 2006-02-15 04:45:25 |
-        |     401 | Patras                     |         39 | 2006-02-15 04:45:25 |
-        |     413 | Poços de Caldas            |         15 | 2006-02-15 04:45:25 |
-        |     424 | Quilmes                    |          6 | 2006-02-15 04:45:25 |
-        |     441 | Saint Louis                |        103 | 2006-02-15 04:45:25 |
-        |     442 | Saint-Denis                |         79 | 2006-02-15 04:45:25 |
-        |     446 | Salinas                    |        103 | 2006-02-15 04:45:25 |
-        |     460 | Santiago de los Caballeros |         27 | 2006-02-15 04:45:25 |
-        |     482 | Sivas                      |         97 | 2006-02-15 04:45:25 |
-        |     497 | Springs                    |         85 | 2006-02-15 04:45:25 |
-        |     499 | Sterling Heights           |        103 | 2006-02-15 04:45:25 |
-        |     529 | Tarsus                     |         97 | 2006-02-15 04:45:25 |
-        |     570 | Vilnius                    |         56 | 2006-02-15 04:45:25 |
-        +---------+----------------------------+------------+---------------------+
+        select * from city where city regexp "s$" limit 10;
+        /*+---------+----------------+------------+---------------------+
+        | city_id | city           | country_id | last_update         |
+        +---------+----------------+------------+---------------------+
+        |      25 | Angra dos Reis |         15 | 2006-02-15 04:45:25 |
+        |      26 | Anápolis       |         15 | 2006-02-15 04:45:25 |
+        |      79 | Bilbays        |         29 | 2006-02-15 04:45:25 |
+        |     102 | Caracas        |        104 | 2006-02-15 04:45:25 |
+        |     118 | Ciomas         |         45 | 2006-02-15 04:45:25 |
+        |     120 | Citrus Heights |        103 | 2006-02-15 04:45:25 |
+        |     125 | Coatzacoalcos  |         60 | 2006-02-15 04:45:25 |
+        |     135 | Dallas         |        103 | 2006-02-15 04:45:25 |
+        |     137 | Daugavpils     |         54 | 2006-02-15 04:45:25 |
+        |     147 | Dos Quebradas  |         24 | 2006-02-15 04:45:25 |
+        +---------+----------------+------------+---------------------+
         */
     --Ciudades del country 61.
         select * from city where country_id=61;
@@ -231,103 +152,21 @@ select count(*) from film_text;
         +---------+-------------------------+------------+---------------------+
         */
     --Ciudades con nombres compuestos.
-        select * from city where city regexp " ";
-        /*+---------+----------------------------+------------+---------------------+
-        | city_id | city                       | country_id | last_update         |
-        +---------+----------------------------+------------+---------------------+
-        |       1 | A Coruña (La Coruña)       |         87 | 2006-02-15 04:45:25 |
-        |       3 | Abu Dhabi                  |        101 | 2006-02-15 04:45:25 |
-        |       6 | Addis Abeba                |         31 | 2006-02-15 04:45:25 |
-        |      18 | Allappuzha (Alleppey)      |         44 | 2006-02-15 04:45:25 |
-        |      20 | Almirante Brown            |          6 | 2006-02-15 04:45:25 |
-        |      25 | Angra dos Reis             |         15 | 2006-02-15 04:45:25 |
-        |      28 | Aparecida de Goiânia       |         15 | 2006-02-15 04:45:25 |
-        |      41 | Augusta-Richmond County    |        103 | 2006-02-15 04:45:25 |
-        |      45 | Bahía Blanca               |          6 | 2006-02-15 04:45:25 |
-        |      53 | Bandar Seri Begawan        |         16 | 2006-02-15 04:45:25 |
-        |      57 | Bat Yam                    |         48 | 2006-02-15 04:45:25 |
-        |      69 | Benin City                 |         69 | 2006-02-15 04:45:25 |
-        |      71 | Berhampore (Baharampur)    |         44 | 2006-02-15 04:45:25 |
-        |      84 | Boa Vista                  |         15 | 2006-02-15 04:45:25 |
-        |     100 | Cam Ranh                   |        105 | 2006-02-15 04:45:25 |
-        |     101 | Cape Coral                 |        103 | 2006-02-15 04:45:25 |
-        |     111 | Charlotte Amalie           |        106 | 2006-02-15 04:45:25 |
-        |     120 | Citrus Heights             |        103 | 2006-02-15 04:45:25 |
-        |     121 | Città del Vaticano         |         41 | 2006-02-15 04:45:25 |
-        |     122 | Ciudad del Este            |         73 | 2006-02-15 04:45:25 |
-        |     124 | Coacalco de Berriozábal    |         60 | 2006-02-15 04:45:25 |
-        |     141 | Deba Habe                  |         69 | 2006-02-15 04:45:25 |
-        |     144 | Dhule (Dhulia)             |         44 | 2006-02-15 04:45:25 |
-        |     146 | Donostia-San Sebastián     |         87 | 2006-02-15 04:45:25 |
-        |     147 | Dos Quebradas              |         24 | 2006-02-15 04:45:25 |
-        |     153 | El Alto                    |         14 | 2006-02-15 04:45:25 |
-        |     154 | El Fuerte                  |         60 | 2006-02-15 04:45:25 |
-        |     155 | El Monte                   |        103 | 2006-02-15 04:45:25 |
-        |     177 | Garden Grove               |        103 | 2006-02-15 04:45:25 |
-        |     185 | Grand Prairie              |        103 | 2006-02-15 04:45:25 |
-        |     190 | Águas Lindas de Goiás      |         15 | 2006-02-15 04:45:25 |
-        |     212 | Huejutla de Reyes          |         60 | 2006-02-15 04:45:25 |
-        |     233 | Jalib al-Shuyukh           |         53 | 2006-02-15 04:45:25 |
-        |     246 | José Azueta                |         60 | 2006-02-15 04:45:25 |
-        |     247 | Juazeiro do Norte          |         15 | 2006-02-15 04:45:25 |
-        |     248 | Juiz de Fora               |         15 | 2006-02-15 04:45:25 |
-        |     262 | Kansas City                |        103 | 2006-02-15 04:45:25 |
-        |     279 | Kowloon and New Kowloon    |         42 | 2006-02-15 04:45:25 |
-        |     288 | La Paz                     |         60 | 2006-02-15 04:45:25 |
-        |     289 | La Plata                   |          6 | 2006-02-15 04:45:25 |
-        |     290 | La Romana                  |         27 | 2006-02-15 04:45:25 |
-        |     297 | Le Mans                    |         34 | 2006-02-15 04:45:25 |
-        |     324 | Mandi Bahauddin            |         72 | 2006-02-15 04:45:25 |
-        |     337 | Mit Ghamr                  |         29 | 2006-02-15 04:45:25 |
-        |     346 | Munger (Monghyr)           |         44 | 2006-02-15 04:45:25 |
-        |     352 | Nabereznyje Tšelny         |         80 | 2006-02-15 04:45:25 |
-        |     358 | Nakhon Sawan               |         94 | 2006-02-15 04:45:25 |
-        |     359 | Nam Dinh                   |        105 | 2006-02-15 04:45:25 |
-        |     366 | Nha Trang                  |        105 | 2006-02-15 04:45:25 |
-        |     368 | Novi Sad                   |        108 | 2006-02-15 04:45:25 |
-        |     373 | Ocumare del Tuy            |        104 | 2006-02-15 04:45:25 |
-        |     388 | Ourense (Orense)           |         87 | 2006-02-15 04:45:25 |
-        |     393 | Pachuca de Soto            |         60 | 2006-02-15 04:45:25 |
-        |     394 | Pak Kret                   |         94 | 2006-02-15 04:45:25 |
-        |     395 | Palghat (Palakkad)         |         44 | 2006-02-15 04:45:25 |
-        |     396 | Pangkal Pinang             |         45 | 2006-02-15 04:45:25 |
-        |     406 | Phnom Penh                 |         18 | 2006-02-15 04:45:25 |
-        |     413 | Poços de Caldas            |         15 | 2006-02-15 04:45:25 |
-        |     418 | Purnea (Purnia)            |         44 | 2006-02-15 04:45:25 |
-        |     425 | Rae Bareli                 |         44 | 2006-02-15 04:45:25 |
-        |     430 | Richmond Hill              |         20 | 2006-02-15 04:45:25 |
-        |     431 | Rio Claro                  |         15 | 2006-02-15 04:45:25 |
-        |     441 | Saint Louis                |        103 | 2006-02-15 04:45:25 |
-        |     449 | San Bernardino             |        103 | 2006-02-15 04:45:25 |
-        |     450 | San Felipe de Puerto Plata |         27 | 2006-02-15 04:45:25 |
-        |     451 | San Felipe del Progreso    |         60 | 2006-02-15 04:45:25 |
-        |     452 | San Juan Bautista Tuxtepec |         60 | 2006-02-15 04:45:25 |
-        |     453 | San Lorenzo                |         73 | 2006-02-15 04:45:25 |
-        |     454 | San Miguel de Tucumán      |          6 | 2006-02-15 04:45:25 |
-        |     456 | Santa Brbara dOeste        |         15 | 2006-02-15 04:45:25 |
-        |     457 | Santa Fé                   |          6 | 2006-02-15 04:45:25 |
-        |     458 | Santa Rosa                 |         75 | 2006-02-15 04:45:25 |
-        |     459 | Santiago de Compostela     |         87 | 2006-02-15 04:45:25 |
-        |     460 | Santiago de los Caballeros |         27 | 2006-02-15 04:45:25 |
-        |     461 | Santo André                |         15 | 2006-02-15 04:45:25 |
-        |     467 | Shahr-e Kord               |         46 | 2006-02-15 04:45:25 |
-        |     476 | Shubra al-Khayma           |         29 | 2006-02-15 04:45:25 |
-        |     478 | Siliguri (Shiliguri)       |         44 | 2006-02-15 04:45:25 |
-        |     485 | São Bernardo do Campo      |         15 | 2006-02-15 04:45:25 |
-        |     486 | São Leopoldo               |         15 | 2006-02-15 04:45:25 |
-        |     493 | South Hill                 |          5 | 2006-02-15 04:45:25 |
-        |     498 | Stara Zagora               |         17 | 2006-02-15 04:45:25 |
-        |     499 | Sterling Heights           |        103 | 2006-02-15 04:45:25 |
-        |     507 | Sungai Petani              |         59 | 2006-02-15 04:45:25 |
-        |     533 | Tel Aviv-Jaffa             |         48 | 2006-02-15 04:45:25 |
-        |     562 | Valle de la Pascua         |        104 | 2006-02-15 04:45:25 |
-        |     563 | Valle de Santiago          |         60 | 2006-02-15 04:45:25 |
-        |     566 | Varanasi (Benares)         |         44 | 2006-02-15 04:45:25 |
-        |     567 | Vicente López              |          6 | 2006-02-15 04:45:25 |
-        |     569 | Vila Velha                 |         15 | 2006-02-15 04:45:25 |
-        |     572 | Vitória de Santo Antão     |         15 | 2006-02-15 04:45:25 |
-        |     582 | Yamuna Nagar               |         44 | 2006-02-15 04:45:25 |
-        +---------+----------------------------+------------+---------------------+
+        select * from city where city regexp " " limit 10;
+        /*+---------+-------------------------+------------+---------------------+
+        | city_id | city                    | country_id | last_update         |
+        +---------+-------------------------+------------+---------------------+
+        |       1 | A Coruña (La Coruña)    |         87 | 2006-02-15 04:45:25 |
+        |       3 | Abu Dhabi               |        101 | 2006-02-15 04:45:25 |
+        |       6 | Addis Abeba             |         31 | 2006-02-15 04:45:25 |
+        |      18 | Allappuzha (Alleppey)   |         44 | 2006-02-15 04:45:25 |
+        |      20 | Almirante Brown         |          6 | 2006-02-15 04:45:25 |
+        |      25 | Angra dos Reis          |         15 | 2006-02-15 04:45:25 |
+        |      28 | Aparecida de Goiânia    |         15 | 2006-02-15 04:45:25 |
+        |      41 | Augusta-Richmond County |        103 | 2006-02-15 04:45:25 |
+        |      45 | Bahía Blanca            |          6 | 2006-02-15 04:45:25 |
+        |      53 | Bandar Seri Begawan     |         16 | 2006-02-15 04:45:25 |
+        +---------+-------------------------+------------+---------------------+
         */
     --Películas con una duración entre 80 y 100.
         select * from film where length between 80 and 100 limit 10;
@@ -472,20 +311,33 @@ select count(*) from film_text;
         +------------------+
         */
     --Pelicula con mayor duración.
-        select max(length) from film;
-        /*+-------------+
-        | max(length) |
-        +-------------+
-        |         185 |
-        +-------------+
+        select * from film where length=(SELECT max(length) from film);
+        /*+---------+--------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+--------------------------------------------------------+---------------------+
+        | film_id | title              | description                                                                                                     | release_year | language_id | original_language_id | rental_duration | rental_rate | length | replacement_cost | rating | special_features                                       | last_update         |
+        +---------+--------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+--------------------------------------------------------+---------------------+
+        |     141 | CHICAGO NORTH      | A Fateful Yarn of a Mad Cow And a Waitress who must Battle a Student in California                              |         2006 |           1 |                 NULL |               6 |        4.99 |    185 |            11.99 | PG-13  | Deleted Scenes,Behind the Scenes                       | 2006-02-15 05:03:42 |
+        |     182 | CONTROL ANTHEM     | A Fateful Documentary of a Robot And a Student who must Battle a Cat in A Monastery                             |         2006 |           1 |                 NULL |               7 |        4.99 |    185 |             9.99 | G      | Commentaries                                           | 2006-02-15 05:03:42 |
+        |     212 | DARN FORRESTER     | A Fateful Story of a A Shark And a Explorer who must Succumb a Technical Writer in A Jet Boat                   |         2006 |           1 |                 NULL |               7 |        4.99 |    185 |            14.99 | G      | Deleted Scenes                                         | 2006-02-15 05:03:42 |
+        |     349 | GANGS PRIDE        | A Taut Character Study of a Woman And a A Shark who must Confront a Frisbee in Berlin                           |         2006 |           1 |                 NULL |               4 |        2.99 |    185 |            27.99 | PG-13  | Behind the Scenes                                      | 2006-02-15 05:03:42 |
+        |     426 | HOME PITY          | A Touching Panorama of a Man And a Secret Agent who must Challenge a Teacher in A MySQL Convention              |         2006 |           1 |                 NULL |               7 |        4.99 |    185 |            15.99 | R      | Trailers,Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+        |     609 | MUSCLE BRIGHT      | A Stunning Panorama of a Sumo Wrestler And a Husband who must Redeem a Madman in Ancient India                  |         2006 |           1 |                 NULL |               7 |        2.99 |    185 |            23.99 | G      | Deleted Scenes                                         | 2006-02-15 05:03:42 |
+        |     690 | POND SEATTLE       | A Stunning Drama of a Teacher And a Boat who must Battle a Feminist in Ancient China                            |         2006 |           1 |                 NULL |               7 |        2.99 |    185 |            25.99 | PG-13  | Trailers,Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+        |     817 | SOLDIERS EVOLUTION | A Lacklusture Panorama of a A Shark And a Pioneer who must Confront a Student in The First Manned Space Station |         2006 |           1 |                 NULL |               7 |        4.99 |    185 |            27.99 | R      | Trailers,Commentaries,Deleted Scenes,Behind the Scenes | 2006-02-15 05:03:42 |
+        |     872 | SWEET BROTHERHOOD  | A Unbelieveable Epistle of a Sumo Wrestler And a Hunter who must Chase a Forensic Psychologist in A Baloon      |         2006 |           1 |                 NULL |               3 |        2.99 |    185 |            27.99 | R      | Deleted Scenes                                         | 2006-02-15 05:03:42 |
+        |     991 | WORST BANGER       | A Thrilling Drama of a Madman And a Dentist who must Conquer a Boy in The Outback                               |         2006 |           1 |                 NULL |               4 |        2.99 |    185 |            26.99 | PG     | Deleted Scenes,Behind the Scenes                       | 2006-02-15 05:03:42 |
+        +---------+--------------------+-----------------------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+--------------------------------------------------------+---------------------+
         */
     --Película con menor duración.
-        select min(length) from film;
-        /*+-------------+
-        | min(length) |
-        +-------------+
-        |          46 |
-        +-------------+
+        select * from film where length=(SELECT min(length) from film);
+        /*+---------+---------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
+        | film_id | title               | description                                                                                      | release_year | language_id | original_language_id | rental_duration | rental_rate | length | replacement_cost | rating | special_features                              | last_update         |
+        +---------+---------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
+        |      15 | ALIEN CENTER        | A Brilliant Drama of a Cat And a Mad Scientist who must Battle a Feminist in A MySQL Convention  |         2006 |           1 |                 NULL |               5 |        2.99 |     46 |            10.99 | NC-17  | Trailers,Commentaries,Behind the Scenes       | 2006-02-15 05:03:42 |
+        |     469 | IRON MOON           | A Fast-Paced Documentary of a Mad Cow And a Boy who must Pursue a Dentist in A Baloon            |         2006 |           1 |                 NULL |               7 |        4.99 |     46 |            27.99 | PG     | Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+        |     504 | KWAI HOMEWARD       | A Amazing Drama of a Car And a Squirrel who must Pursue a Car in Soviet Georgia                  |         2006 |           1 |                 NULL |               5 |        0.99 |     46 |            25.99 | PG-13  | Trailers,Commentaries                         | 2006-02-15 05:03:42 |
+        |     505 | LABYRINTH LEAGUE    | A Awe-Inspiring Saga of a Composer And a Frisbee who must Succumb a Pioneer in The Sahara Desert |         2006 |           1 |                 NULL |               6 |        2.99 |     46 |            24.99 | PG-13  | Commentaries,Behind the Scenes                | 2006-02-15 05:03:42 |
+        |     730 | RIDGEMONT SUBMARINE | A Unbelieveable Drama of a Waitress And a Composer who must Sink a Mad Cow in Ancient Japan      |         2006 |           1 |                 NULL |               3 |        0.99 |     46 |            28.99 | PG-13  | Commentaries,Deleted Scenes,Behind the Scenes | 2006-02-15 05:03:42 |
+        +---------+---------------------+--------------------------------------------------------------------------------------------------+--------------+-------------+----------------------+-----------------+-------------+--------+------------------+--------+-----------------------------------------------+---------------------+
         */
     --Mostrar las ciudades del country Spain (multitabla).
         select c.* from city as c,country as co where c.country_id=co.country_id and co.country = "spain";
@@ -500,28 +352,71 @@ select count(*) from film_text;
         +---------+-------------------------+------------+---------------------+
         */   
     --Mostrar el nombre de la película y el nombre de los actores.
-    select a.first_name,f.title from actor as a,film as f,film_actor as fa where a.actor_id=fa.actor_id and fa.film_id=f.film_id limit 10;
-    /*+------------+-----------------------+
-    | first_name | title                 |
-    +------------+-----------------------+
-    | PENELOPE   | ACADEMY DINOSAUR      |
-    | PENELOPE   | ANACONDA CONFESSIONS  |
-    | PENELOPE   | ANGELS LIFE           |
-    | PENELOPE   | BULWORTH COMMANDMENTS |
-    | PENELOPE   | CHEAPER CLYDE         |
-    | PENELOPE   | COLOR PHILADELPHIA    |
-    | PENELOPE   | ELEPHANT TROJAN       |
-    | PENELOPE   | GLEAMING JAWBREAKER   |
-    | PENELOPE   | HUMAN GRAFFITI        |
-    | PENELOPE   | KING EVOLUTION        |
-    +------------+-----------------------+
-    */
+        select a.first_name,f.title from actor as a,film as f,film_actor as fa where a.actor_id=fa.actor_id and fa.film_id=f.film_id limit 10;
+        /*+------------+-----------------------+
+        | first_name | title                 |
+        +------------+-----------------------+
+        | PENELOPE   | ACADEMY DINOSAUR      |
+        | PENELOPE   | ANACONDA CONFESSIONS  |
+        | PENELOPE   | ANGELS LIFE           |
+        | PENELOPE   | BULWORTH COMMANDMENTS |
+        | PENELOPE   | CHEAPER CLYDE         |
+        | PENELOPE   | COLOR PHILADELPHIA    |
+        | PENELOPE   | ELEPHANT TROJAN       |
+        | PENELOPE   | GLEAMING JAWBREAKER   |
+        | PENELOPE   | HUMAN GRAFFITI        |
+        | PENELOPE   | KING EVOLUTION        |
+        +------------+-----------------------+
+        */
     --Mostrar el nombre de la película y el de sus categorías.
-
+        select f.title,c.name from film as f, category as c, film_category as fc
+        where f.film_id=fc.film_id and fc.category_id=c.category_id limit 10;
+        /*+---------------------+--------+
+        | title               | name   |
+        +---------------------+--------+
+        | AMADEUS HOLY        | Action |
+        | AMERICAN CIRCUS     | Action |
+        | ANTITRUST TOMATOES  | Action |
+        | ARK RIDGEMONT       | Action |
+        | BAREFOOT MANCHURIAN | Action |
+        | BERETS AGENT        | Action |
+        | BRIDE INTRIGUE      | Action |
+        | BULL SHAWSHANK      | Action |
+        | CADDYSHACK JEDI     | Action |
+        | CAMPUS REMEMBER     | Action |
+        +---------------------+--------+
+        */
     --Mostrar el country, la ciudad y dirección de cada miembro del staff.
-
+        select s.first_name, s.last_name, a.address, ci.city, co.country from staff as s
+            , address as a, city as ci, country as co where s.address_id=a.address_id 
+            and a.city_id=ci.city_id and ci.country_id=co.country_id;
+        /*+------------+-----------+----------------------+------------+-----------+
+        | first_name | last_name | address              | city       | country   |
+        +------------+-----------+----------------------+------------+-----------+
+        | Mike       | Hillyer   | 23 Workhaven Lane    | Lethbridge | Canada    |
+        | Jon        | Stephens  | 1411 Lillydale Drive | Woodridge  | Australia |
+        +------------+-----------+----------------------+------------+-----------+
+        */
     --Mostrar el country, la ciudad y dirección de cada customer.
-
+        select cu.first_name, cu.last_name, a.address, ci.city, co.country 
+        from customer as cu, city as ci, country as co, address as a 
+        where cu.address_id=a.address_id and a.city_id=ci.city_id 
+        and ci.country_id=co.country_id limit 10;
+        /*+------------+-----------+-------------------------------+-----------------+----------------+
+        | first_name | last_name | address                       | city            | country        |
+        +------------+-----------+-------------------------------+-----------------+----------------+
+        | VERA       | MCCOY     | 1168 Najafabad Parkway        | Kabul           | Afghanistan    |
+        | MARIO      | CHEATHAM  | 1924 Shimonoseki Drive        | Batna           | Algeria        |
+        | JUDY       | GRAY      | 1031 Daugavpils Parkway       | Béchar          | Algeria        |
+        | JUNE       | CARROLL   | 757 Rustenburg Avenue         | Skikda          | Algeria        |
+        | ANTHONY    | SCHWAB    | 1892 Nabereznyje Telny Lane   | Tafuna          | American Samoa |
+        | CLAUDE     | HERZOG    | 486 Ondo Parkway              | Benguela        | Angola         |
+        | MARTIN     | BALES     | 368 Hunuco Boulevard          | Namibe          | Angola         |
+        | BOBBY      | BOUDREAU  | 1368 Maracabo Boulevard       | South Hill      | Anguilla       |
+        | WILLIE     | MARKHAM   | 1623 Kingstown Drive          | Almirante Brown | Argentina      |
+        | JORDAN     | ARCHULETA | 1229 Varanasi (Benares) Manor | Avellaneda      | Argentina      |
+        +------------+-----------+-------------------------------+-----------------+----------------+
+        */
     --Numero de películas de cada rating
         select count(*) from film group by rating;
         /*+----------+
@@ -535,28 +430,121 @@ select count(*) from film_text;
         +----------+
         */
     --Cuantas películas ha realizado el actor ED CHASE.
-
+        select count(f.title) from film as f, actor as a, film_actor as fa 
+        where a.first_name='ED' and a.last_name='Chase' 
+        and a.actor_id=fa.actor_id and fa.film_id=f.film_id;
+        /*+----------------+
+        | count(f.title) |
+        +----------------+
+        |             22 |
+        +----------------+
+        */
     --Media de duración de las películas cada categoría.
-
-
+        select c.name, count(f.title) from category as c, film_category as fc, film as f
+        where f.film_id=fc.film_id and fc.category_id=c.category_id group by c.category_id;
+        /*+-------------+----------------+
+        | name        | count(f.title) |
+        +-------------+----------------+
+        | Action      |             64 |
+        | Animation   |             66 |
+        | Children    |             60 |
+        | Classics    |             57 |
+        | Comedy      |             58 |
+        | Documentary |             68 |
+        | Drama       |             62 |
+        | Family      |             69 |
+        | Foreign     |             73 |
+        | Games       |             61 |
+        | Horror      |             56 |
+        | Music       |             51 |
+        | New         |             63 |
+        | Sci-Fi      |             61 |
+        | Sports      |             74 |
+        | Travel      |             57 |
+        +-------------+----------------+
+        */
 --Vistas
     --Vista1
+        Create view staff_list AS
+            SELECT 
+            s.staff AS ID, 
+                CONCAT(s.first_name, " ", s.last_name) AS name, 
+                a.address AS address, 
+                a.postal_code AS `zip code`,
+                a.phone AS phone, 
+                city.city AS city, 
+                country.country AS country, 
+            FROM 
+            staff AS s JOIN address AS a 
+                ON s.address_id = a.address_id 
+                JOIN city 
+                ON a.city_id = city.city_id
+            JOIN country 
+                ON city.country_id = country.country_id;
 
-
-
+        select * from staff_list limit 10;
     --Vista2
+        Create view cantidad_peliculas_por_categoria AS
+            select 
+                c.name, count(f.title) 
+            from 
+                category as c, 
+                film_category as fc, 
+                film as f
+            where 
+                f.film_id=fc.film_id 
+            and 
+                fc.category_id=c.category_id 
+            group by c.category_id;
 
-
-
+        select * from cantidad_peliculas_por_categoria limit 10;
     --Vista3
-
-
-
+        Create view category_film_list AS
+            select 
+                f.title,c.name 
+            from 
+                film as f, 
+                category as c, 
+                film_category as fc
+            where 
+                f.film_id=fc.film_id 
+            and 
+                fc.category_id=c.category_id 
+            limit 10;
+        
+        select * from category_film_list limit 10;
     --Vista4
+        Create view actores_por_pelicula AS
+            select 
+                CONCAT(a.first_name, " ", a.last_name) AS name,f.title 
+            from
+                actor as a,
+                film as f,
+                film_actor as fa 
+            where
+                a.actor_id=fa.actor_id 
+            and 
+                fa.film_id=f.film_id 
+            limit 10;
 
-
-
+        select * from actores_por_pelicula limit 10;
     --Vista5
+        drop view actores_por_pelicula_y_rating;
 
+        Create view actores_por_pelicula_y_rating AS
+            select 
+                CONCAT(a.first_name, " ", a.last_name) AS name, count(f.title)
+            from
+                actor as a,
+                film as f,
+                film_actor as fa 
+            where
+                a.actor_id=fa.actor_id 
+            and 
+                fa.film_id=f.film_id 
+            GROUP by name
+            limit 10;
+
+        select * from actores_por_pelicula_y_rating limit 10;
 
 
