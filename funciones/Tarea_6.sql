@@ -29,6 +29,8 @@ select * from p;
 ## Creacion del procedimiento insert_persona
 
 ```sql
+delimiter ;;
+Drop pocedure if EXISTS insert_persona;
 DELIMITER $$
 DROP PROCEDURE IF EXISTS insert_persona$$
 CREATE PROCEDURE insert_persona(in cantidad int)
@@ -47,7 +49,7 @@ BEGIN
     do
 	set salario = contador * contador;
 	set variable = concat('0', contador);
-        set nombre = concat('pp', contador);
+    set nombre = concat('pp', contador);
 	insert into persona values (variable, nombre, salario, 8, 5, 3, 9, 2);
 	set contador = contador + 1;
     end while;
